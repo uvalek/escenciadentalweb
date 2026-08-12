@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# DOMINIO: cambiar esta línea si se contrata un dominio propio
+Sitemap: https://clinica-especialidades-cholula.vercel.app/sitemap.xml

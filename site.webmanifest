@@ -1,0 +1,15 @@
+{
+  "name": "Clínica de Especialidades Médicas & Dentales",
+  "short_name": "Clínica Cholula",
+  "description": "Odontología, medicina general con urgencias 24/7, fisioterapia y nutrición clínica en San Pedro Cholula, Puebla.",
+  "lang": "es-MX",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0C2438",
+  "theme_color": "#1B6FA8",
+  "icons": [
+    { "src": "/img/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/img/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/img/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
