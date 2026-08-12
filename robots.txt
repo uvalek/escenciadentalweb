@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
 
-# DOMINIO: cambiar esta línea si se contrata un dominio propio
-Sitemap: https://clinica-especialidades-cholula.vercel.app/sitemap.xml
+# DOMINIO: cambiar esta línea cuando Vercel dé la dirección definitiva
+# o se contrate un dominio propio
+Sitemap: https://esenciadental.vercel.app/sitemap.xml

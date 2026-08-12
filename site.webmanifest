@@ -1,7 +1,7 @@
 {
-  "name": "Clínica de Especialidades Médicas & Dentales",
-  "short_name": "Clínica Cholula",
-  "description": "Odontología, medicina general con urgencias 24/7, fisioterapia y nutrición clínica en San Pedro Cholula, Puebla.",
+  "name": "Esencia Dental — Odontología Familiar",
+  "short_name": "Esencia Dental",
+  "description": "Odontología familiar e infantil en San Pedro Cholula, Puebla. Atención con cita para niños y adultos.",
   "lang": "es-MX",
   "start_url": "/",
   "display": "standalone",

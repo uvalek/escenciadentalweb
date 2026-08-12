@@ -8,33 +8,38 @@
      TÍTULO Y DESCRIPCIÓN — esto es lo que se ve en los resultados de Google.
      Si los cambias: título máximo 60 caracteres, descripción máximo 155.
      ========================================================================== -->
-<title>Clínica de Especialidades Médicas y Dentales en San Pedro Cholula</title>
-<meta name="description" content="Odontología, medicina general con urgencias 24/7, fisioterapia y nutrición clínica en San Pedro Cholula, Puebla. 4.7 estrellas en Google. Agenda por WhatsApp.">
+<title>Esencia Dental — Odontología familiar e infantil en Cholula</title>
+<meta name="description" content="Odontología familiar e infantil en San Pedro Cholula, Puebla. 4.7 estrellas en Google con 52 reseñas. Atención con cita, de lunes a jueves. Agenda por WhatsApp.">
 
-<!-- DIRECCIÓN DEL SITIO — cambiar en los 4 lugares marcados con DOMINIO
-     cuando se contrate un dominio propio. Ver el README. -->
-<link rel="canonical" href="https://clinica-especialidades-cholula.vercel.app/"><!-- DOMINIO -->
+<!-- DIRECCIÓN DEL SITIO — está en 9 lugares del sitio (3 aquí en el <head>,
+     4 en el bloque de Google del final, 1 en robots.txt y 1 en sitemap.xml).
+     Cambiarlos todos cuando Vercel dé la dirección definitiva o se contrate un
+     dominio propio. Ver el README. -->
+<link rel="canonical" href="https://esenciadental.vercel.app/"><!-- DOMINIO -->
 
 <meta name="robots" content="index, follow, max-image-preview:large">
-<meta name="theme-color" content="#1B6FA8">
+<meta name="theme-color" content="#1B6FA8"><!-- PENDIENTE: color de marca (turquesa) -->
 <meta name="geo.region" content="MX-PUE">
 <meta name="geo.placename" content="San Pedro Cholula, Puebla">
-<meta name="geo.position" content="19.0530929;-98.3114999">
+<meta name="geo.position" content="19.065525;-98.3195008">
 
 <!-- ==========================================================================
      OPEN GRAPH — controla cómo se ve el enlace al compartirlo por WhatsApp,
      Facebook o Messenger. La imagen debe ser una dirección completa (https://).
+
+     PENDIENTE: /img/og-image.jpg sigue siendo la imagen de la clínica que se
+     usó como plantilla. Hay que reemplazarla en el paso de imágenes y logo.
      ========================================================================== -->
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_MX">
-<meta property="og:site_name" content="Clínica de Especialidades Médicas &amp; Dentales">
-<meta property="og:title" content="Clínica de Especialidades Médicas y Dentales — San Pedro Cholula">
-<meta property="og:description" content="Odontología, medicina general con urgencias 24/7, fisioterapia y nutrición. 4.7★ en Google. Agenda por WhatsApp.">
-<meta property="og:url" content="https://clinica-especialidades-cholula.vercel.app/"><!-- DOMINIO -->
-<meta property="og:image" content="https://clinica-especialidades-cholula.vercel.app/img/og-image.jpg"><!-- DOMINIO -->
+<meta property="og:site_name" content="Esencia Dental">
+<meta property="og:title" content="Esencia Dental — Odontología familiar e infantil en Cholula">
+<meta property="og:description" content="Odontología familiar e infantil en San Pedro Cholula, Puebla. 4.7★ en Google. Agenda por WhatsApp.">
+<meta property="og:url" content="https://esenciadental.vercel.app/"><!-- DOMINIO -->
+<meta property="og:image" content="https://esenciadental.vercel.app/img/og-image.jpg"><!-- DOMINIO -->
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Clínica de Especialidades Médicas y Dentales — odontología, medicina general, fisioterapia y nutrición en San Pedro Cholula">
+<meta property="og:image:alt" content="Esencia Dental — odontología familiar e infantil en San Pedro Cholula">
 <meta name="twitter:card" content="summary_large_image">
 
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -62,21 +67,23 @@
 <header class="site-header" id="encabezado">
   <div class="site-header__inner">
 
-    <a class="site-header__logo" href="#inicio" aria-label="Inicio — Clínica de Especialidades Médicas y Dentales">
-      <img src="/img/logo.svg" alt="Clínica de Especialidades Médicas-Dentales y +" width="150" height="44">
+    <!-- PENDIENTE: /img/logo.svg todavía es el logo de la clínica plantilla.
+         Reemplazar por el logo de Esencia Dental en el paso de logo. -->
+    <a class="site-header__logo" href="#inicio" aria-label="Inicio — Esencia Dental">
+      <img src="/img/logo.svg" alt="Esencia Dental — Odontología Familiar" width="150" height="44">
     </a>
 
     <nav class="site-header__nav" id="menu-principal" aria-label="Navegación principal">
       <a href="#inicio">Inicio</a>
       <a href="#servicios">Servicios</a>
-      <a href="#especialistas">Especialistas</a>
+      <a href="#especialistas">Quién te atiende</a>
       <a href="#resenas">Reseñas</a>
       <a href="#contacto">Contacto</a>
     </nav>
 
     <!-- DATO DE CONTACTO: WhatsApp -->
     <a class="btn btn--whatsapp site-header__cta"
-       href="https://wa.me/522221860390?text=Hola%2C%20vi%20su%20p%C3%A1gina%20y%20quiero%20agendar%20una%20cita."
+       href="https://wa.me/522223273990?text=Hola%2C%20vi%20su%20p%C3%A1gina%20y%20quiero%20agendar%20una%20cita."
        target="_blank" rel="noopener">
       <svg class="cta-icono" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91S17.5 2 12.04 2Zm5.8 14.03c-.24.68-1.42 1.3-1.96 1.35-.54.05-1.05.24-3.53-.73-2.99-1.18-4.86-4.28-5-4.48-.15-.2-1.19-1.6-1.19-3.05 0-1.45.76-2.16 1.03-2.46.27-.29.59-.37.78-.37h.56c.18 0 .42-.07.66.5.24.59.83 2.03.9 2.18.07.15.12.32.02.51-.1.2-.15.32-.29.49l-.44.51c-.15.15-.3.31-.13.6.17.29.76 1.25 1.62 2.02 1.11.99 1.87 1.3 2.14 1.45.27.15.42.12.58-.07.15-.2.68-.78.86-1.05.18-.27.36-.22.61-.13.24.1 1.55.73 1.82.87.27.15.44.22.51.34.07.13.07.72-.17 1.4Z"/></svg>
       <span class="cta-texto-corto">Agendar</span>
@@ -101,40 +108,25 @@
 <section class="hero" id="inicio">
 
   <!-- ------------------------------------------------------------------------
-       FOTOS DE PORTADA — se van alternando cada 5 segundos y encienden la
-       etiqueta de su especialidad. El orden aquí manda: la primera es la que
-       se ve al cargar. Cada foto y cada etiqueta se emparejan por el
-       atributo data-categoria; si cambias uno, cambia el otro.
+       FOTO DE PORTADA
 
-       Solo la primera trae src normal (se carga de inmediato). Las otras
-       cuatro usan data-src y las carga el JavaScript cuando la página ya
-       terminó, para que la portada aparezca rápido.
+       PENDIENTE — IMÁGENES. La plantilla traía 5 fotos que se alternaban cada
+       5 segundos (odontología, medicina, fisioterapia, nutrición y urgencias).
+       Cuatro eran de servicios que Esencia Dental no ofrece, así que se
+       quitaron. Queda solo la foto dental, y tampoco es de esta clínica.
+
+       Cuando lleguen las fotos de Esencia Dental: reemplaza esta imagen y, si
+       quieres recuperar el carrusel, copia este bloque <picture> tantas veces
+       como fotos tengas, cambia el data-categoria de cada una para que empareje
+       con su etiqueta de abajo, y en todas menos la primera usa data-src y
+       data-srcset en vez de src y srcset (así el JavaScript las carga después).
+       El carrusel se enciende solo en cuanto hay más de una foto.
        ------------------------------------------------------------------------ -->
   <div class="hero__media" id="hero-fotos">
 
     <picture class="hero__foto is-activa" data-categoria="odontologia">
       <source type="image/webp" srcset="/img/hero/odontologia-900.webp 900w, /img/hero/odontologia-1800.webp 1672w" sizes="100vw">
       <img src="/img/hero/odontologia-1800.jpg" srcset="/img/hero/odontologia-900.jpg 900w, /img/hero/odontologia-1800.jpg 1672w" sizes="100vw" alt="" width="1672" height="941" fetchpriority="high" decoding="async">
-    </picture>
-
-    <picture class="hero__foto" data-categoria="medicina">
-      <source type="image/webp" data-srcset="/img/hero/medicina-900.webp 900w, /img/hero/medicina-1800.webp 1800w" sizes="100vw">
-      <img data-src="/img/hero/medicina-1800.jpg" data-srcset="/img/hero/medicina-900.jpg 900w, /img/hero/medicina-1800.jpg 1800w" sizes="100vw" alt="" width="1800" height="1200" decoding="async">
-    </picture>
-
-    <picture class="hero__foto" data-categoria="fisioterapia">
-      <source type="image/webp" data-srcset="/img/hero/fisioterapia-900.webp 900w, /img/hero/fisioterapia-1800.webp 1800w" sizes="100vw">
-      <img data-src="/img/hero/fisioterapia-1800.jpg" data-srcset="/img/hero/fisioterapia-900.jpg 900w, /img/hero/fisioterapia-1800.jpg 1800w" sizes="100vw" alt="" width="1800" height="1200" decoding="async">
-    </picture>
-
-    <picture class="hero__foto" data-categoria="nutricion">
-      <source type="image/webp" data-srcset="/img/hero/nutricion-900.webp 900w, /img/hero/nutricion-1800.webp 1800w" sizes="100vw">
-      <img data-src="/img/hero/nutricion-1800.jpg" data-srcset="/img/hero/nutricion-900.jpg 900w, /img/hero/nutricion-1800.jpg 1800w" sizes="100vw" alt="" width="1800" height="1138" decoding="async">
-    </picture>
-
-    <picture class="hero__foto" data-categoria="urgencias">
-      <source type="image/webp" data-srcset="/img/hero/urgencias-900.webp 900w, /img/hero/urgencias-1800.webp 1800w" sizes="100vw">
-      <img data-src="/img/hero/urgencias-1800.jpg" data-srcset="/img/hero/urgencias-900.jpg 900w, /img/hero/urgencias-1800.jpg 1800w" sizes="100vw" alt="" width="1800" height="1200" decoding="async">
     </picture>
 
   </div>
@@ -144,16 +136,16 @@
     <div class="hero__grid">
 
       <div class="hero__col">
-        <h1 class="hero__titulo">Toda la salud de tu familia, en un solo lugar</h1>
+        <h1 class="hero__titulo">La sonrisa de toda tu familia, en las mismas manos</h1>
 
         <div class="hero__acciones">
           <!-- DATO DE CONTACTO: WhatsApp -->
           <a class="btn btn--azul"
-             href="https://wa.me/522221860390?text=Hola%2C%20vi%20su%20p%C3%A1gina%20y%20quiero%20agendar%20una%20cita."
+             href="https://wa.me/522223273990?text=Hola%2C%20vi%20su%20p%C3%A1gina%20y%20quiero%20agendar%20una%20cita."
              target="_blank" rel="noopener">Agenda una cita</a>
         </div>
 
-        <p class="hero__lead">Servicios médicos, dentales, fisioterapia y nutrición en San Pedro Cholula, Puebla. Una sola clínica para las cuatro cosas que tu familia necesita resolver.</p>
+        <p class="hero__lead">Odontología familiar e infantil en San Pedro Cholula, Puebla. Niños y adultos se atienden en el mismo consultorio, con la misma calma y el mismo cuidado.</p>
 
         <div class="rating-card">
           <div class="rating-card__fila">
@@ -170,49 +162,42 @@
                   <path fill="url(#estrella70)" d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.9-6.2-3.3-6.2 3.3L7 14.2 2 9.3l6.9-1L12 2Z"/>
                 </svg>
               </div>
-              <span class="rating-card__conteo"><span data-contador="44">44</span> reseñas en Google</span>
+              <span class="rating-card__conteo"><span data-contador="52">52</span> reseñas en Google</span>
             </div>
           </div>
 
           <!-- ----------------------------------------------------------------
-               Fragmentos de reseñas reales de Google, rotando cada 5 segundos.
-               Son citas textuales recortadas: los "…" marcan dónde se recortó.
+               Fragmentos de reseñas reales de la ficha de Google de Esencia
+               Dental, consultadas el 12 de agosto de 2026. Son citas textuales
+               recortadas: los "…" marcan dónde se recortó.
                NO reescribir el texto. Las reseñas completas están más abajo.
                ---------------------------------------------------------------- -->
           <div class="rating-card__resenas" id="hero-resenas">
             <blockquote class="mini-resena is-activa">
-              <p>Los médicos muy profesionales. Excelente servicio</p>
-              <cite>Miguel L.</cite>
+              <p>Excelente atención de los doctores, te explican el como y el por qué de tu tratamiento</p>
+              <cite>Moni S.</cite>
             </blockquote>
             <blockquote class="mini-resena">
-              <p>…siempre lo han atendido super bien, el Dr. Es super amable y paciente con los niños…</p>
-              <cite>Sharon A.</cite>
+              <p>…son unos excelentes dentistas… se toman el tiempo en cada tratamiento…</p>
+              <cite>Janeth M.</cite>
             </blockquote>
             <blockquote class="mini-resena">
-              <p>Las Dentistas son muy profesionales, llevo mi ortodoncia y estoy por terminar</p>
-              <cite>Mayra A.</cite>
-            </blockquote>
-            <blockquote class="mini-resena">
-              <p>…le saco dos dientes a mi hijo de 6 años y no sintió la anestesia ni lloro…</p>
-              <cite>Myriam M.</cite>
-            </blockquote>
-            <blockquote class="mini-resena">
-              <p>…no te dejan con la duda te saben explicar muy bien…</p>
-              <cite>Fabiola M.</cite>
+              <p>Excelente lugar, una atención muy rápida, amables y lugar muy bien ubicado</p>
+              <cite>Proveedor de México</cite>
             </blockquote>
           </div>
         </div>
       </div>
 
-      <!-- Estas etiquetas se encienden al ritmo de las fotos de arriba.
-           El data-categoria tiene que coincidir con el de su foto. -->
+      <!-- Etiquetas de la portada. Mientras haya una sola foto no rotan: todas
+           se quedan encendidas. Si más adelante se recupera el carrusel, deja
+           .is-activa solo en la primera y empareja cada data-categoria con el
+           de su foto. -->
       <div class="hero__tags-col">
         <div class="hero__tags" id="hero-etiquetas">
-          <span class="tag is-activa" data-categoria="odontologia">Odontología</span>
-          <span class="tag" data-categoria="medicina">Medicina general</span>
-          <span class="tag" data-categoria="fisioterapia">Fisioterapia</span>
-          <span class="tag" data-categoria="nutricion">Nutrición</span>
-          <span class="tag tag--urgencias" data-categoria="urgencias">Urgencias 24/7</span>
+          <span class="tag is-activa" data-categoria="odontologia">Odontología familiar</span>
+          <span class="tag is-activa" data-categoria="infantil">Odontología infantil</span>
+          <span class="tag is-activa" data-categoria="cita">Atención con cita</span>
         </div>
       </div>
 
@@ -223,12 +208,18 @@
 
 <!-- ==========================================================================
      SERVICIOS
+     --------------------------------------------------------------------------
+     PENDIENTE — LISTA DE TRATAMIENTOS. Aquí solo está lo confirmado por la
+     clínica: odontología familiar e infantil. En cuanto den la lista real de
+     tratamientos (limpiezas, resinas, ortodoncia, endodoncia, prótesis, etc.),
+     se agregan como <ul class="servicio__lista"> dentro de cada tarjeta, igual
+     que en el README. No inventar tratamientos que no hagan.
      ========================================================================== -->
 <section class="seccion contenedor" id="servicios">
   <div class="seccion-encabezado revelar">
-    <span class="eyebrow">Nuestras 4 áreas</span>
-    <h2 class="titulo-seccion">Cuatro especialidades, una sola cita para tu familia</h2>
-    <p class="texto-seccion">No hace falta ir de un consultorio a otro. Aquí se atienden los dientes, la salud general, la rehabilitación física y la alimentación de toda la familia.</p>
+    <span class="eyebrow">Lo que hacemos</span>
+    <h2 class="titulo-seccion">Odontología para toda la familia, de los más chicos a los más grandes</h2>
+    <p class="texto-seccion">Una sola clínica para el papá, la mamá y los niños. Sin cambiar de consultorio ni de doctor cada vez que a alguien de la casa le duele una muela.</p>
   </div>
 
   <div class="servicios__grid">
@@ -240,74 +231,23 @@
         </span>
         <div>
           <div class="servicio__area">Área 01</div>
-          <h3 class="servicio__titulo">Odontología</h3>
+          <h3 class="servicio__titulo">Odontología familiar</h3>
         </div>
       </div>
-      <ul class="servicio__lista">
-        <li><span class="servicio__vineta" aria-hidden="true">·</span>Rehabilitación dental</li>
-        <li><span class="servicio__vineta" aria-hidden="true">·</span>Endodoncia</li>
-        <li><span class="servicio__vineta" aria-hidden="true">·</span>Cirugía</li>
-        <li><span class="servicio__vineta" aria-hidden="true">·</span>Ortodoncia</li>
-        <li><span class="servicio__vineta" aria-hidden="true">·</span>Odontopediatría</li>
-        <li><span class="servicio__vineta" aria-hidden="true">·</span>Limpieza y blanqueamiento</li>
-      </ul>
+      <p class="servicio__texto">Atención dental para adultos y adolescentes. Se revisa, se explica qué tiene tu boca y por qué, y se acuerda contigo el tratamiento antes de empezar. Nada de procedimientos que no entiendas o que no hayas aprobado.</p>
     </article>
 
     <article class="servicio servicio--medica revelar revelar--zoom" data-retraso="1">
       <div class="servicio__cabecera">
         <span class="servicio__icono">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 6.1a5.2 5.2 0 0 0-7.4 0L12 7.5l-1.4-1.4a5.2 5.2 0 0 0-7.4 7.4L12 22l8.8-8.5a5.2 5.2 0 0 0 0-7.4Z"/><path d="M3.2 12.4h4.1L8.7 10l2 4.2 1.5-2.4h3.9"/></svg>
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8.5 14.2a4.6 4.6 0 0 0 7 0"/><path d="M9.2 9.6h.01"/><path d="M14.8 9.6h.01"/></svg>
         </span>
         <div>
           <div class="servicio__area">Área 02</div>
-          <h3 class="servicio__titulo">Medicina general</h3>
+          <h3 class="servicio__titulo">Odontología infantil</h3>
         </div>
       </div>
-      <ul class="servicio__lista">
-        <li><span class="servicio__vineta" aria-hidden="true">·</span>Consulta médica especializada</li>
-        <li><span class="servicio__vineta" aria-hidden="true">·</span>Urgencias 24/7 en consulta y a domicilio</li>
-        <li><span class="servicio__vineta" aria-hidden="true">·</span>Diagnóstico oportuno</li>
-        <li><span class="servicio__vineta" aria-hidden="true">·</span>Control de enfermedades crónicas</li>
-      </ul>
-    </article>
-
-    <article class="servicio servicio--fisio revelar revelar--zoom" data-retraso="2">
-      <div class="servicio__cabecera">
-        <span class="servicio__icono">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="13" cy="4.5" r="2"/><path d="M13 8v5"/><path d="M13 13l-3.5 8"/><path d="M13 13l2.5 3.5.5 4.5"/><path d="M13 9.5 8.5 11"/><path d="M13 9.5l4.5 1.5"/></svg>
-        </span>
-        <div>
-          <div class="servicio__area">Área 03</div>
-          <h3 class="servicio__titulo">Fisioterapia y rehabilitación</h3>
-        </div>
-      </div>
-      <ul class="servicio__lista servicio__lista--detalle">
-        <li><strong>Neurológica.</strong> E.V.C., parálisis facial.</li>
-        <li><strong>Ortopédica.</strong> Esguinces, luxaciones, fracturas, osteoartritis, tendinopatías.</li>
-        <li><strong>Pediátrica.</strong> Estimulación temprana, alteraciones motoras y del neurodesarrollo.</li>
-        <li><strong>Geriátrica.</strong> Prevención de caídas.</li>
-      </ul>
-    </article>
-
-    <article class="servicio servicio--nutricion revelar revelar--zoom" data-retraso="3">
-      <div class="servicio__cabecera">
-        <span class="servicio__icono">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20.5A7 7 0 0 1 9.8 6.6C15.5 5.5 17 5 19 2.5c1 2 2 4.2 2 8 0 5.5-4.8 10-10 10Z"/><path d="M2 21.5c0-3 1.9-5.4 5.1-6C9.5 15 12 13.5 13 12.5"/></svg>
-        </span>
-        <div>
-          <div class="servicio__area">Área 04</div>
-          <h3 class="servicio__titulo">Nutrición clínica</h3>
-        </div>
-      </div>
-      <ul class="servicio__lista">
-        <li><span class="servicio__vineta" aria-hidden="true">·</span>Diabetes mellitus</li>
-        <li><span class="servicio__vineta" aria-hidden="true">·</span>Insuficiencia renal crónica</li>
-        <li><span class="servicio__vineta" aria-hidden="true">·</span>Hipertensión</li>
-        <li><span class="servicio__vineta" aria-hidden="true">·</span>Sobrepeso y obesidad</li>
-        <li><span class="servicio__vineta" aria-hidden="true">·</span>Paciente pre y postoperatorio</li>
-        <li><span class="servicio__vineta" aria-hidden="true">·</span>Apoyo nutricional avanzado</li>
-        <li><span class="servicio__vineta" aria-hidden="true">·</span>Enfermedad hepática</li>
-      </ul>
+      <p class="servicio__texto">La primera visita al dentista marca todas las demás. A los niños se les atiende con paciencia, a su ritmo y explicándoles lo que va a pasar, para que salgan sin miedo y quieran volver.</p>
     </article>
 
   </div>
@@ -319,7 +259,8 @@
      --------------------------------------------------------------------------
      Esta sección NO se ve en la página publicada porque está dentro de un
      comentario HTML. Para activarla cuando el cliente confirme los precios:
-     borra la línea de abajo que dice INICIO OCULTO y la que dice FIN OCULTO.
+     borra la línea de abajo que dice INICIO OCULTO y la que dice FIN OCULTO,
+     y cambia los conceptos y montos por los reales de Esencia Dental.
      ========================================================================== -->
 <!-- INICIO OCULTO
 <section class="precios">
@@ -327,27 +268,19 @@
     <div class="precios__cabecera">
       <div>
         <span class="eyebrow">Precios de referencia</span>
-        <h2 class="titulo-seccion">Odontología, con precios claros desde el principio</h2>
+        <h2 class="titulo-seccion">Precios claros desde el principio</h2>
       </div>
       <p class="precios__intro">Estos son los tratamientos que más nos preguntan. El costo final se define en la valoración, sin cobros sorpresa.</p>
     </div>
 
     <div class="precios__tabla">
       <div class="precios__fila">
-        <span class="precios__concepto">Consulta general</span>
-        <span class="precios__monto">$150</span>
+        <span class="precios__concepto">Consulta y valoración</span>
+        <span class="precios__monto">$000</span>
       </div>
       <div class="precios__fila">
         <span class="precios__concepto">Limpieza dental</span>
-        <span class="precios__monto">$400</span>
-      </div>
-      <div class="precios__fila">
-        <span class="precios__concepto">Blanqueamiento y limpieza</span>
-        <span class="precios__monto">$1,200</span>
-      </div>
-      <div class="precios__fila">
-        <span class="precios__concepto">Prótesis dental <span>1–6 unidades</span></span>
-        <span class="precios__monto">$5,000</span>
+        <span class="precios__monto">$000</span>
       </div>
     </div>
 
@@ -359,37 +292,29 @@ FIN OCULTO -->
 
 <!-- ==========================================================================
      ESPECIALISTAS
+     --------------------------------------------------------------------------
+     PENDIENTE: varias reseñas hablan de "los doctores" en plural. Si hay más
+     de un dentista en la clínica, copia el bloque <article> de abajo, cambia
+     nombre, inicial y descripción, y quita la clase equipo__grid--uno del
+     contenedor para que las tarjetas se acomoden en varias columnas.
      ========================================================================== -->
 <section class="seccion contenedor" id="especialistas">
   <div class="seccion-encabezado revelar">
-    <span class="eyebrow">Especialistas</span>
-    <h2 class="titulo-seccion">Quién te atiende</h2>
-    <p class="texto-seccion">Un equipo pequeño y cercano. Cada área tiene a su especialista y todos trabajan en la misma clínica.</p>
+    <span class="eyebrow">Quién te atiende</span>
+    <h2 class="titulo-seccion">Siempre la misma cara</h2>
+    <p class="texto-seccion">No es una clínica de paso donde cada cita te toca alguien distinto. Aquí sabes desde el principio quién va a atender a tu familia.</p>
   </div>
 
-  <div class="equipo__grid">
+  <div class="equipo__grid equipo__grid--uno">
 
     <article class="especialista especialista--medica revelar revelar--zoom" data-retraso="0">
-      <div class="especialista__inicial" aria-hidden="true">E</div>
+      <div class="especialista__inicial" aria-hidden="true">J</div>
       <div class="especialista__cuerpo">
-        <span class="especialista__etiqueta">Medicina general</span>
-        <h3 class="especialista__nombre">Dr. Estanislao Robles V.</h3>
-        <p class="especialista__texto">Atiende consulta médica y urgencias en la clínica y a domicilio.</p>
+        <span class="especialista__etiqueta">Odontología familiar e infantil</span>
+        <h3 class="especialista__nombre">Dr. José Manuel Garibay Martín</h3>
+        <p class="especialista__texto">Atiende la consulta de odontología familiar e infantil de la clínica.</p>
       </div>
     </article>
-
-    <article class="especialista especialista--nutricion revelar revelar--zoom" data-retraso="1">
-      <div class="especialista__inicial" aria-hidden="true">M</div>
-      <div class="especialista__cuerpo">
-        <span class="especialista__etiqueta">Nutrición clínica</span>
-        <h3 class="especialista__nombre">Nutrióloga María Elena</h3>
-        <p class="especialista__texto">Lleva los planes de nutrición clínica de la clínica.</p>
-      </div>
-    </article>
-
-    <!-- Falta la tarjeta del especialista en odontología: en cuanto la clínica
-         dé el nombre, copia uno de los bloques <article> de arriba, cambia el
-         nombre, la inicial y la etiqueta a "Odontología". Ver el README. -->
 
   </div>
 </section>
@@ -407,7 +332,7 @@ FIN OCULTO -->
       <div class="resenas__nota-fila">
         <span class="resenas__nota" data-contador="4.7" data-decimales="1">4.7</span>
         <div class="resenas__detalle">
-          <div class="estrellas estrellas--grande" role="img" aria-label="Calificación 4.7 de 5 estrellas basada en 44 reseñas">
+          <div class="estrellas estrellas--grande" role="img" aria-label="Calificación 4.7 de 5 estrellas basada en 52 reseñas">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.9-6.2-3.3-6.2 3.3L7 14.2 2 9.3l6.9-1L12 2Z"/></svg>
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.9-6.2-3.3-6.2 3.3L7 14.2 2 9.3l6.9-1L12 2Z"/></svg>
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.9-6.2-3.3-6.2 3.3L7 14.2 2 9.3l6.9-1L12 2Z"/></svg>
@@ -417,23 +342,24 @@ FIN OCULTO -->
               <path fill="url(#estrella70b)" d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.9-6.2-3.3-6.2 3.3L7 14.2 2 9.3l6.9-1L12 2Z"/>
             </svg>
           </div>
-          <span class="resenas__conteo"><span data-contador="44">44</span> reseñas</span>
+          <span class="resenas__conteo"><span data-contador="52">52</span> reseñas</span>
         </div>
       </div>
 
       <p class="resenas__texto">Lo que dicen los pacientes que ya se atienden con nosotros, publicado directamente en Google.</p>
 
       <a class="btn btn--blanco resenas__boton"
-         href="https://www.google.com/maps/place/Cl%C3%ADnica+de+Especialidades+M%C3%A9dicas+%26+Dentales/@19.0533984,-98.3111735,1081m/data=!3m1!1e3!4m6!3m5!1s0x85cfc8819d96141b:0xf8d62c35a913d072!8m2!3d19.0530929!4d-98.3114999!16s%2Fg%2F11tdr59gw1"
+         href="https://www.google.com/maps/place/?q=place_id:ChIJcUjuVt_Jz4URRidBGo3ldNI"
          target="_blank" rel="noopener">
-        Ver las 44 reseñas en Google
+        Ver las 52 reseñas en Google
         <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>
       </a>
     </div>
 
     <!-- ----------------------------------------------------------------------
-         RESEÑAS REALES, copiadas textualmente de la ficha de Google el 11 de
-         agosto de 2026. Las tres son de 5 estrellas (verificado).
+         RESEÑAS REALES, copiadas textualmente de la ficha de Google de Esencia
+         Dental el 12 de agosto de 2026. Las tres son de 5 estrellas
+         (verificado en la ficha).
 
          NO EDITAR EL TEXTO: son palabras de pacientes reales. Si quieres
          cambiar cuáles se muestran, copia otras de la ficha tal cual están,
@@ -449,8 +375,8 @@ FIN OCULTO -->
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.9-6.2-3.3-6.2 3.3L7 14.2 2 9.3l6.9-1L12 2Z"/></svg>
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.9-6.2-3.3-6.2 3.3L7 14.2 2 9.3l6.9-1L12 2Z"/></svg>
         </div>
-        <p class="resena__texto">Llevo a mi hijo desde ya hace un año a sus citas con el odontopediatra y siempre lo han atendido super bien, el Dr. Es super amable y paciente con los niños, todo el personal es amable y sus precios son accesibles, lo recomiendo ampliamente</p>
-        <p class="resena__pie"><span class="resena__autor">Sharon Michelle Avila Arrieta</span> · Julio 2026</p>
+        <p class="resena__texto">Por dónde comenzar, son unos excelentes dentistas, tengo años de conocerlos y siempre he quedado satisfecha con los resultados, son unas personas que tienen un gran profesionalismo, se toman el tiempo en cada tratamiento, te acompañan y te…</p>
+        <p class="resena__pie"><span class="resena__autor">Janeth Mejía Rangel</span> · Reseña en Google</p>
       </article>
 
       <article class="resena revelar" data-retraso="1">
@@ -461,8 +387,8 @@ FIN OCULTO -->
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.9-6.2-3.3-6.2 3.3L7 14.2 2 9.3l6.9-1L12 2Z"/></svg>
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.9-6.2-3.3-6.2 3.3L7 14.2 2 9.3l6.9-1L12 2Z"/></svg>
         </div>
-        <p class="resena__texto">Atención agradable y sobre todo amable. Las Dentistas son muy profesionales, llevo mi ortodoncia y estoy por terminar, Excelente servicio los recomiendo mucho.</p>
-        <p class="resena__pie"><span class="resena__autor">Mayra Almazan Reyes</span> · Mayo 2026</p>
+        <p class="resena__texto">Excelente atención de los doctores, te explican el como y el por qué de tu tratamiento, recomendados ampliamente</p>
+        <p class="resena__pie"><span class="resena__autor">Moni Sánchez</span> · Reseña en Google</p>
       </article>
 
       <article class="resena revelar" data-retraso="2">
@@ -473,8 +399,8 @@ FIN OCULTO -->
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.9-6.2-3.3-6.2 3.3L7 14.2 2 9.3l6.9-1L12 2Z"/></svg>
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.9-6.2-3.3-6.2 3.3L7 14.2 2 9.3l6.9-1L12 2Z"/></svg>
         </div>
-        <p class="resena__texto">Muy bien servicio, calidad - precio van de la mano... La doctora Fanny siempre sabe explicar bien todo, muy buena le saco dos dientes a mi hijo de 6 años y no sintió la anestesia ni lloro, en el tratamiento de brackets vamos perfecto. Muy buena atención</p>
-        <p class="resena__pie"><span class="resena__autor">Myriam Muñoz</span> · Diciembre 2025</p>
+        <p class="resena__texto">Excelente lugar, una atención muy rápida, amables y lugar muy bien ubicado. Recomendable para una sonrisa increíble</p>
+        <p class="resena__pie"><span class="resena__autor">Proveedor de México</span> · Reseña en Google</p>
       </article>
 
     </div>
@@ -484,35 +410,40 @@ FIN OCULTO -->
 
 
 <!-- ==========================================================================
-     URGENCIAS
+     HORARIOS
+     --------------------------------------------------------------------------
+     Ocupa el lugar de la banda de urgencias de la plantilla. Esencia Dental no
+     da urgencias 24/7, así que aquí va lo que sí importa: cuándo abren.
      ========================================================================== -->
-<section class="urgencias">
+<section class="urgencias urgencias--horario">
   <div class="urgencias__inner">
 
     <div class="urgencias__texto revelar revelar--izq">
       <div class="urgencias__insignia">
-        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v3"/><path d="M5.6 5.6l2.1 2.1"/><path d="M18.4 5.6l-2.1 2.1"/><path d="M4 21v-4a8 8 0 0 1 16 0v4Z"/></svg>
-        Urgencias 24/7
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        Horarios
       </div>
-      <h2 class="urgencias__titulo">Una urgencia no espera. Llama a cualquier hora.</h2>
-      <p class="urgencias__lead">Atención de urgencias las 24 horas, los 7 días, en consulta y a domicilio en San Pedro Cholula y la zona conurbada.</p>
+      <h2 class="urgencias__titulo">Lunes a jueves. Aparta tu lugar antes de venir.</h2>
+      <p class="urgencias__lead">Atendemos de lunes a jueves, de 10:00 a 13:00 y de 15:00 a 18:30. Viernes, sábado y domingo la clínica está cerrada. Escríbenos por WhatsApp y te confirmamos el horario disponible.</p>
     </div>
 
     <div class="urgencias__telefonos revelar revelar--der">
       <!-- DATO DE CONTACTO: teléfono principal -->
-      <a class="tel-boton tel-boton--principal" href="tel:+522221860390">
+      <a class="tel-boton tel-boton--principal" href="tel:+522223273990">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15.5 21A12.5 12.5 0 0 1 3 8.5V6a2 2 0 0 1 2-2h2.2a1 1 0 0 1 1 .8l.8 3.2a1 1 0 0 1-.5 1.1L7 10a10 10 0 0 0 7 7l.9-1.5a1 1 0 0 1 1.1-.5l3.2.8a1 1 0 0 1 .8 1V19a2 2 0 0 1-2 2Z"/></svg>
         <span class="tel-boton__cuerpo">
-          <span class="tel-boton__rotulo">Línea principal</span>
-          <span class="tel-boton__numero">222 186 0390</span>
+          <span class="tel-boton__rotulo">Llámanos</span>
+          <span class="tel-boton__numero">222 327 3990</span>
         </span>
       </a>
-      <!-- DATO DE CONTACTO: teléfono secundario -->
-      <a class="tel-boton tel-boton--secundario" href="tel:+522227107383">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15.5 21A12.5 12.5 0 0 1 3 8.5V6a2 2 0 0 1 2-2h2.2a1 1 0 0 1 1 .8l.8 3.2a1 1 0 0 1-.5 1.1L7 10a10 10 0 0 0 7 7l.9-1.5a1 1 0 0 1 1.1-.5l3.2.8a1 1 0 0 1 .8 1V19a2 2 0 0 1-2 2Z"/></svg>
+      <!-- DATO DE CONTACTO: WhatsApp -->
+      <a class="tel-boton tel-boton--secundario"
+         href="https://wa.me/522223273990?text=Hola%2C%20vi%20su%20p%C3%A1gina%20y%20quiero%20agendar%20una%20cita."
+         target="_blank" rel="noopener">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91S17.5 2 12.04 2Zm5.8 14.03c-.24.68-1.42 1.3-1.96 1.35-.54.05-1.05.24-3.53-.73-2.99-1.18-4.86-4.28-5-4.48-.15-.2-1.19-1.6-1.19-3.05 0-1.45.76-2.16 1.03-2.46.27-.29.59-.37.78-.37h.56c.18 0 .42-.07.66.5.24.59.83 2.03.9 2.18.07.15.12.32.02.51-.1.2-.15.32-.29.49l-.44.51c-.15.15-.3.31-.13.6.17.29.76 1.25 1.62 2.02 1.11.99 1.87 1.3 2.14 1.45.27.15.42.12.58-.07.15-.2.68-.78.86-1.05.18-.27.36-.22.61-.13.24.1 1.55.73 1.82.87.27.15.44.22.51.34.07.13.07.72-.17 1.4Z"/></svg>
         <span class="tel-boton__cuerpo">
-          <span class="tel-boton__rotulo">Segundo número</span>
-          <span class="tel-boton__numero">222 710 7383</span>
+          <span class="tel-boton__rotulo">Agenda por</span>
+          <span class="tel-boton__numero">WhatsApp</span>
         </span>
       </a>
     </div>
@@ -527,7 +458,7 @@ FIN OCULTO -->
 <section class="seccion contenedor" id="contacto">
   <div class="seccion-encabezado revelar">
     <span class="eyebrow">Ubicación y contacto</span>
-    <h2 class="titulo-seccion">Estamos sobre Av. Miguel Alemán, en San Pablo Tecamac</h2>
+    <h2 class="titulo-seccion">Estamos sobre la 15 Sur, en San Pedro Cholula</h2>
   </div>
 
   <div class="contacto__grid">
@@ -536,7 +467,7 @@ FIN OCULTO -->
       <button class="mapa__previa" type="button" id="ver-mapa">
         <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
         <span>Ver el mapa de la clínica</span>
-        <small>Av. Miguel Alemán 2008, San Pablo Tecamac</small>
+        <small>15 Sur no. 502-B, San Pedro Cholula</small>
       </button>
     </div>
 
@@ -548,9 +479,9 @@ FIN OCULTO -->
           <div>
             <div class="rotulo">Dirección</div>
             <!-- DATO DE CONTACTO: dirección -->
-            <p>Miguel Alemán y 21 Poniente 101, Av. Miguel Alemán 2008, San Pablo Tecamac, 72750 San Pedro Cholula, Puebla</p>
+            <p>15 Sur no. 502-B, C.P. 72764, San Pedro Cholula, Puebla</p>
             <a class="btn btn--azul btn--chico"
-               href="https://www.google.com/maps/dir/?api=1&amp;destination=19.0530929%2C-98.3114999"
+               href="https://www.google.com/maps/dir/?api=1&amp;destination=19.065525%2C-98.3195008&amp;destination_place_id=ChIJcUjuVt_Jz4URRidBGo3ldNI"
                target="_blank" rel="noopener">Cómo llegar</a>
           </div>
         </div>
@@ -558,34 +489,39 @@ FIN OCULTO -->
 
       <div class="contacto__pares">
         <!-- DATO DE CONTACTO: teléfono principal -->
-        <a class="tarjeta-dato" href="tel:+522221860390">
+        <a class="tarjeta-dato" href="tel:+522223273990">
           <div class="rotulo">Teléfono / WhatsApp</div>
-          <div class="tarjeta-dato__valor">222 186 0390</div>
-        </a>
-        <!-- DATO DE CONTACTO: teléfono secundario -->
-        <a class="tarjeta-dato" href="tel:+522227107383">
-          <div class="rotulo">Segundo número</div>
-          <div class="tarjeta-dato__valor">222 710 7383</div>
-        </a>
-      </div>
-
-      <div class="contacto__pares">
-        <!-- DATO DE CONTACTO: correo -->
-        <a class="tarjeta-dato" href="mailto:fanny.tellezpacheco@gmail.com">
-          <div class="rotulo">Correo</div>
-          <div class="tarjeta-dato__valor tarjeta-dato__valor--chico">fanny.tellezpacheco@gmail.com</div>
+          <div class="tarjeta-dato__valor">222 327 3990</div>
         </a>
         <!-- DATO DE CONTACTO: Facebook -->
-        <a class="tarjeta-dato" href="https://www.facebook.com/dentalsmileespecialidades/" target="_blank" rel="noopener">
+        <a class="tarjeta-dato" href="https://www.facebook.com/esenciadentalfam/" target="_blank" rel="noopener">
           <div class="rotulo">Facebook</div>
-          <div class="tarjeta-dato__valor tarjeta-dato__valor--chico">@dentalsmileespecialidades</div>
+          <div class="tarjeta-dato__valor tarjeta-dato__valor--chico">@esenciadentalfam</div>
         </a>
       </div>
 
-      <!-- HORARIOS: pendientes de confirmar con la clínica. Cuando los tengas,
-           sustituye el texto de abajo y añádelos también en el JSON-LD del
-           final del archivo. Ver el README. -->
-      <p class="contacto__horario"><strong>Urgencias las 24 horas, los 7 días.</strong> Para consulta de odontología, medicina general, fisioterapia o nutrición, escríbenos por WhatsApp y te confirmamos el horario disponible. Se recomienda agendar cita. Aceptamos <strong>tarjetas de crédito y débito</strong>.</p>
+      <!-- HORARIOS reales de la clínica. Si cambian, cámbialos también en el
+           bloque de Google (JSON-LD) del final del archivo y en la banda de
+           horarios de más arriba. -->
+      <div class="dato-bloque">
+        <div class="dato-bloque__fila">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1B6FA8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          <div>
+            <div class="rotulo">Horarios</div>
+            <ul class="horario-lista">
+              <li><span>Lunes a jueves</span><strong>10:00 – 13:00 y 15:00 – 18:30</strong></li>
+              <li><span>Viernes</span><strong>Cerrado</strong></li>
+              <li><span>Sábado y domingo</span><strong>Cerrado</strong></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <p class="contacto__horario">Se atiende <strong>con cita</strong>. Escríbenos por WhatsApp y te apartamos lugar en el horario que mejor te acomode.</p>
+
+      <!-- PENDIENTE: correo electrónico e Instagram. Cuando la clínica los
+           confirme, se agregan como una tarjeta más dentro de un bloque
+           <div class="contacto__pares">, igual que el Facebook de arriba. -->
 
     </div>
   </div>
@@ -598,16 +534,16 @@ FIN OCULTO -->
 <section class="cta-final">
   <div class="cta-final__caja revelar revelar--zoom">
     <div class="cta-final__texto-col">
-      <h2 class="cta-final__titulo">Agenda hoy y resuelve todo en una sola visita</h2>
+      <h2 class="cta-final__titulo">Agenda hoy la cita de toda la familia</h2>
       <p class="cta-final__texto">Escríbenos por WhatsApp y te confirmamos horario.</p>
     </div>
     <div class="cta-final__acciones">
       <!-- DATO DE CONTACTO: WhatsApp -->
       <a class="btn btn--whatsapp"
-         href="https://wa.me/522221860390?text=Hola%2C%20vi%20su%20p%C3%A1gina%20y%20quiero%20agendar%20una%20cita."
+         href="https://wa.me/522223273990?text=Hola%2C%20vi%20su%20p%C3%A1gina%20y%20quiero%20agendar%20una%20cita."
          target="_blank" rel="noopener">Agendar por WhatsApp</a>
       <!-- DATO DE CONTACTO: teléfono principal -->
-      <a class="btn btn--fantasma" href="tel:+522221860390">Llamar ahora</a>
+      <a class="btn btn--fantasma" href="tel:+522223273990">Llamar ahora</a>
     </div>
   </div>
 </section>
@@ -622,17 +558,16 @@ FIN OCULTO -->
   <div class="site-footer__grid">
 
     <div>
-      <img src="/img/logo-blanco.svg" alt="Clínica de Especialidades Médicas-Dentales y +" width="211" height="62" loading="lazy">
-      <p>Clínica de Especialidades Médicas &amp; Dentales. Odontología, medicina general, fisioterapia y nutrición en San Pedro Cholula, Puebla.</p>
+      <!-- PENDIENTE: /img/logo-blanco.svg todavía es el logo de la plantilla. -->
+      <img src="/img/logo-blanco.svg" alt="Esencia Dental — Odontología Familiar" width="211" height="62" loading="lazy">
+      <p>Esencia Dental. Odontología familiar e infantil en San Pedro Cholula, Puebla.</p>
     </div>
 
     <div>
       <div class="site-footer__rotulo">Contacto</div>
       <ul class="site-footer__lista">
-        <li><a href="tel:+522221860390">222 186 0390</a></li><!-- DATO DE CONTACTO -->
-        <li><a href="tel:+522227107383">222 710 7383</a></li><!-- DATO DE CONTACTO -->
-        <li><a href="mailto:fanny.tellezpacheco@gmail.com">fanny.tellezpacheco@gmail.com</a></li><!-- DATO DE CONTACTO -->
-        <li><a href="https://www.facebook.com/dentalsmileespecialidades/" target="_blank" rel="noopener">Facebook</a></li><!-- DATO DE CONTACTO -->
+        <li><a href="tel:+522223273990">222 327 3990</a></li><!-- DATO DE CONTACTO -->
+        <li><a href="https://www.facebook.com/esenciadentalfam/" target="_blank" rel="noopener">Facebook</a></li><!-- DATO DE CONTACTO -->
       </ul>
     </div>
 
@@ -640,7 +575,7 @@ FIN OCULTO -->
       <div class="site-footer__rotulo">Secciones</div>
       <ul class="site-footer__lista">
         <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#especialistas">Especialistas</a></li>
+        <li><a href="#especialistas">Quién te atiende</a></li>
         <li><a href="#resenas">Reseñas</a></li>
         <li><a href="#contacto">Ubicación y contacto</a></li>
       </ul>
@@ -649,13 +584,13 @@ FIN OCULTO -->
     <div>
       <div class="site-footer__rotulo">Dirección</div>
       <!-- DATO DE CONTACTO: dirección -->
-      <p class="site-footer__direccion">Miguel Alemán y 21 Poniente 101, Av. Miguel Alemán 2008, San Pablo Tecamac, 72750 San Pedro Cholula, Puebla</p>
+      <p class="site-footer__direccion">15 Sur no. 502-B, C.P. 72764, San Pedro Cholula, Puebla</p>
     </div>
 
   </div>
 
   <div class="site-footer__legal">
-    <span>© 2026 Clínica de Especialidades Médicas &amp; Dentales</span>
+    <span>© 2026 Esencia Dental</span>
     <!-- Aviso de privacidad: pendiente. Cuando la clínica lo tenga, se agrega
          aquí un enlace. Mientras tanto no ponemos un enlace roto. -->
   </div>
@@ -665,7 +600,7 @@ FIN OCULTO -->
 <!-- Burbuja de WhatsApp (escritorio) -->
 <!-- DATO DE CONTACTO: WhatsApp -->
 <a class="wa-flotante"
-   href="https://wa.me/522221860390?text=Hola%2C%20vi%20su%20p%C3%A1gina%20y%20quiero%20agendar%20una%20cita."
+   href="https://wa.me/522223273990?text=Hola%2C%20vi%20su%20p%C3%A1gina%20y%20quiero%20agendar%20una%20cita."
    target="_blank" rel="noopener" aria-label="Agendar por WhatsApp">
   <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91S17.5 2 12.04 2Zm5.8 14.03c-.24.68-1.42 1.3-1.96 1.35-.54.05-1.05.24-3.53-.73-2.99-1.18-4.86-4.28-5-4.48-.15-.2-1.19-1.6-1.19-3.05 0-1.45.76-2.16 1.03-2.46.27-.29.59-.37.78-.37h.56c.18 0 .42-.07.66.5.24.59.83 2.03.9 2.18.07.15.12.32.02.51-.1.2-.15.32-.29.49l-.44.51c-.15.15-.3.31-.13.6.17.29.76 1.25 1.62 2.02 1.11.99 1.87 1.3 2.14 1.45.27.15.42.12.58-.07.15-.2.68-.78.86-1.05.18-.27.36-.22.61-.13.24.1 1.55.73 1.82.87.27.15.44.22.51.34.07.13.07.72-.17 1.4Z"/></svg>
 </a>
@@ -674,13 +609,13 @@ FIN OCULTO -->
 <div class="barra-movil">
   <!-- DATO DE CONTACTO: WhatsApp -->
   <a class="btn btn--whatsapp"
-     href="https://wa.me/522221860390?text=Hola%2C%20vi%20su%20p%C3%A1gina%20y%20quiero%20agendar%20una%20cita."
+     href="https://wa.me/522223273990?text=Hola%2C%20vi%20su%20p%C3%A1gina%20y%20quiero%20agendar%20una%20cita."
      target="_blank" rel="noopener">
     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91S17.5 2 12.04 2Zm5.8 14.03c-.24.68-1.42 1.3-1.96 1.35-.54.05-1.05.24-3.53-.73-2.99-1.18-4.86-4.28-5-4.48-.15-.2-1.19-1.6-1.19-3.05 0-1.45.76-2.16 1.03-2.46.27-.29.59-.37.78-.37h.56c.18 0 .42-.07.66.5.24.59.83 2.03.9 2.18.07.15.12.32.02.51-.1.2-.15.32-.29.49l-.44.51c-.15.15-.3.31-.13.6.17.29.76 1.25 1.62 2.02 1.11.99 1.87 1.3 2.14 1.45.27.15.42.12.58-.07.15-.2.68-.78.86-1.05.18-.27.36-.22.61-.13.24.1 1.55.73 1.82.87.27.15.44.22.51.34.07.13.07.72-.17 1.4Z"/></svg>
     WhatsApp
   </a>
   <!-- DATO DE CONTACTO: teléfono principal -->
-  <a class="btn btn--azul" href="tel:+522221860390">
+  <a class="btn btn--azul" href="tel:+522223273990">
     <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15.5 21A12.5 12.5 0 0 1 3 8.5V6a2 2 0 0 1 2-2h2.2a1 1 0 0 1 1 .8l.8 3.2a1 1 0 0 1-.5 1.1L7 10a10 10 0 0 0 7 7l.9-1.5a1 1 0 0 1 1.1-.5l3.2.8a1 1 0 0 1 .8 1V19a2 2 0 0 1-2 2Z"/></svg>
     Llamar
   </a>
@@ -691,74 +626,77 @@ FIN OCULTO -->
      DATOS ESTRUCTURADOS PARA GOOGLE (JSON-LD)
      --------------------------------------------------------------------------
      NO EDITAR A MANO salvo que sepas lo que haces: un error de coma aquí hace
-     que Google ignore todo el bloque. Si cambias un teléfono o la dirección,
-     recuerda cambiarlo también aquí.
+     que Google ignore todo el bloque. Si cambias un teléfono, la dirección o
+     los horarios, recuerda cambiarlo también aquí.
      ========================================================================== -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": ["MedicalClinic", "Dentist"],
-  "@id": "https://clinica-especialidades-cholula.vercel.app/#clinica",
-  "name": "Clínica de Especialidades Médicas & Dentales",
-  "description": "Odontología, medicina general con urgencias 24/7, fisioterapia y rehabilitación, y nutrición clínica en San Pedro Cholula, Puebla.",
-  "url": "https://clinica-especialidades-cholula.vercel.app/",
-  "logo": "https://clinica-especialidades-cholula.vercel.app/img/logo.svg",
-  "image": "https://clinica-especialidades-cholula.vercel.app/img/og-image.jpg",
-  "telephone": ["+52-222-186-0390", "+52-222-710-7383"],
-  "email": "fanny.tellezpacheco@gmail.com",
+  "@type": "Dentist",
+  "@id": "https://esenciadental.vercel.app/#clinica",
+  "name": "Esencia Dental — Odontología Familiar",
+  "description": "Odontología familiar e infantil en San Pedro Cholula, Puebla. Atención con cita para niños y adultos.",
+  "url": "https://esenciadental.vercel.app/",
+  "logo": "https://esenciadental.vercel.app/img/logo.svg",
+  "image": "https://esenciadental.vercel.app/img/og-image.jpg",
+  "telephone": "+52-222-327-3990",
   "currenciesAccepted": "MXN",
-  "paymentAccepted": "Tarjeta de crédito, Tarjeta de débito",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Miguel Alemán y 21 Poniente 101, Av. Miguel Alemán 2008",
+    "streetAddress": "15 Sur no. 502-B",
     "addressLocality": "San Pedro Cholula",
     "addressRegion": "Puebla",
-    "postalCode": "72750",
+    "postalCode": "72764",
     "addressCountry": "MX"
   },
   "geo": {
     "@type": "GeoCoordinates",
-    "latitude": 19.0530929,
-    "longitude": -98.3114999
+    "latitude": 19.065525,
+    "longitude": -98.3195008
   },
-  "hasMap": "https://www.google.com/maps/place/Cl%C3%ADnica+de+Especialidades+M%C3%A9dicas+%26+Dentales/@19.0533984,-98.3111735,1081m/data=!3m1!1e3!4m6!3m5!1s0x85cfc8819d96141b:0xf8d62c35a913d072!8m2!3d19.0530929!4d-98.3114999!16s%2Fg%2F11tdr59gw1",
+  "hasMap": "https://www.google.com/maps/place/?q=place_id:ChIJcUjuVt_Jz4URRidBGo3ldNI",
   "sameAs": [
-    "https://www.facebook.com/dentalsmileespecialidades/",
-    "https://www.google.com/maps/place/Cl%C3%ADnica+de+Especialidades+M%C3%A9dicas+%26+Dentales/@19.0533984,-98.3111735,1081m/data=!3m1!1e3!4m6!3m5!1s0x85cfc8819d96141b:0xf8d62c35a913d072!8m2!3d19.0530929!4d-98.3114999!16s%2Fg%2F11tdr59gw1"
+    "https://www.facebook.com/esenciadentalfam/",
+    "https://www.google.com/maps/place/?q=place_id:ChIJcUjuVt_Jz4URRidBGo3ldNI"
   ],
   "areaServed": [
     { "@type": "City", "name": "San Pedro Cholula" },
     { "@type": "City", "name": "San Andrés Cholula" },
     { "@type": "City", "name": "Puebla" }
   ],
-  "medicalSpecialty": ["Dentistry", "PrimaryCare", "PhysicalTherapy", "Nutrition"],
+  "medicalSpecialty": "Dentistry",
   "availableService": [
-    { "@type": "MedicalProcedure", "name": "Rehabilitación dental" },
-    { "@type": "MedicalProcedure", "name": "Endodoncia" },
-    { "@type": "MedicalProcedure", "name": "Cirugía dental" },
-    { "@type": "MedicalProcedure", "name": "Ortodoncia" },
-    { "@type": "MedicalProcedure", "name": "Odontopediatría" },
-    { "@type": "MedicalProcedure", "name": "Limpieza y blanqueamiento dental" },
-    { "@type": "MedicalProcedure", "name": "Consulta de medicina general" },
-    { "@type": "MedicalProcedure", "name": "Urgencias médicas 24/7" },
-    { "@type": "MedicalProcedure", "name": "Fisioterapia neurológica" },
-    { "@type": "MedicalProcedure", "name": "Fisioterapia ortopédica" },
-    { "@type": "MedicalProcedure", "name": "Fisioterapia pediátrica" },
-    { "@type": "MedicalProcedure", "name": "Fisioterapia geriátrica" },
-    { "@type": "MedicalProcedure", "name": "Nutrición clínica" }
+    { "@type": "MedicalProcedure", "name": "Odontología familiar" },
+    { "@type": "MedicalProcedure", "name": "Odontología infantil" }
+  ],
+  "employee": {
+    "@type": "Person",
+    "name": "José Manuel Garibay Martín",
+    "jobTitle": "Cirujano dentista"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+      "opens": "10:00",
+      "closes": "13:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+      "opens": "15:00",
+      "closes": "18:30"
+    }
   ],
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "4.7",
-    "reviewCount": "44",
+    "reviewCount": "52",
     "bestRating": "5",
     "worstRating": "1"
   }
 }
 </script>
-<!-- HORARIOS: cuando la clínica confirme sus horarios, se añaden dentro del
-     bloque de arriba con la propiedad "openingHoursSpecification".
-     El README explica exactamente cómo. -->
 
 <script src="/js/main.js" defer></script>
 </body>

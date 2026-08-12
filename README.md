@@ -1,18 +1,40 @@
-# Escencia Dental — sitio web
+# Esencia Dental — sitio web
 
-Página web de una sola pantalla para la clínica. Su trabajo es que alguien que
-busca en Google desde el celular llegue, confíe y mande WhatsApp.
+Página web de una sola pantalla para la clínica, en San Pedro Cholula, Puebla. Su
+trabajo es que alguien que busca en Google desde el celular llegue, confíe y mande
+WhatsApp.
 
 Está hecha con HTML, CSS y JavaScript normales. **No hay que compilar ni instalar
 nada.** Editas un archivo, lo guardas, lo subes y ya está en línea.
 
-> ⚠️ **ESTE SITIO TODAVÍA NO ES DE ESCENCIA DENTAL.**
-> Es una copia exacta del sitio de otra clínica, usada como base. Los textos,
-> teléfonos, WhatsApp, correo, dirección, redes, logo y fotos siguen siendo los
-> del sitio original. **No publicar en producción ni conectar a un dominio hasta
-> haber reemplazado todos esos datos** (ver las secciones de abajo: los 19
-> marcadores `DATO DE CONTACTO` en `index.html`, los marcadores `DOMINIO:` en
-> `sitemap.xml` y `robots.txt`, y `site.webmanifest`).
+> ⚠️ **Antes de publicar como sitio final, faltan tres cosas** que todavía son de
+> la clínica que se usó como plantilla: el **logo** (`img/logo.svg` y
+> `img/logo-blanco.svg`), la **foto de portada** (`img/hero/odontologia-*`) y la
+> **imagen para compartir por WhatsApp** (`img/og-image.jpg`). Los textos, los
+> datos de contacto, los horarios y las reseñas ya son los reales de Esencia
+> Dental. Ver *Pendientes* al final.
+
+---
+
+## Los datos de la clínica que usa el sitio
+
+| Dato | Valor |
+|---|---|
+| Nombre | Esencia Dental — Odontología Familiar |
+| Teléfono y WhatsApp | 222 327 3990 |
+| Dirección | 15 Sur no. 502-B, C.P. 72764, San Pedro Cholula, Puebla |
+| Coordenadas | 19.065525, -98.3195008 |
+| Horarios | Lunes a jueves, 10:00–13:00 y 15:00–18:30. Viernes a domingo cerrado |
+| Doctor | Dr. José Manuel Garibay Martín |
+| Servicios | Odontología familiar e infantil |
+| Facebook | [@esenciadentalfam](https://www.facebook.com/esenciadentalfam/) |
+| Ficha de Google | 4.7 ★ con 52 reseñas ([ver](https://www.google.com/maps/place/?q=place_id:ChIJcUjuVt_Jz4URRidBGo3ldNI)) |
+
+> **Ojo con el teléfono.** El cliente pasó el **222 126 1476**, pero en la ficha de
+> Google está publicado el **222 327 3990**. El sitio usa el de Google, que es el
+> que ve la gente que los busca. Si el bueno es el otro, hay que cambiarlo en el
+> sitio **y** en la ficha de Google, porque tener dos números distintos publicados
+> confunde a los pacientes y a Google.
 
 ---
 
@@ -43,13 +65,13 @@ cambios que hiciste.
 | `css/styles.css` | Los colores, tamaños y espacios. Solo si quieres cambiar el aspecto |
 | `js/main.js` | El menú del celular, el mapa y el carrusel de la portada |
 | `img/` | Logos, iconos y la imagen que se ve al compartir por WhatsApp |
-| `img/hero/` | Las 5 fotos de la portada, ya optimizadas. **No editar a mano** |
+| `img/hero/` | Las fotos de la portada, ya optimizadas. **No editar a mano** |
 | `fonts/` | Los tipos de letra. No tocar |
 | `vercel.json`, `robots.txt`, `sitemap.xml`, `site.webmanifest` | Configuración. No tocar salvo lo que dice más abajo |
 
 ---
 
-## Cambiar un teléfono, el correo o la dirección
+## Cambiar el teléfono, el WhatsApp o la dirección
 
 Estos datos aparecen en **varios lugares** de la página. Si cambias uno solo, la
 página queda inconsistente y Google se confunde.
@@ -61,46 +83,45 @@ Para no fallar, cada dato de contacto está marcado con un comentario. Abre
 DATO DE CONTACTO
 ```
 
-Hay **19 marcadores**. Te van a saltar a cada lugar donde hay un teléfono, correo,
+Hay **15 marcadores**. Te van a saltar a cada lugar donde hay un teléfono,
 WhatsApp, dirección o Facebook. **Cámbialos todos.** Son estos:
 
 | Dato | En cuántos lugares de la página |
 |---|---|
-| WhatsApp (`wa.me/522221860390`) | 5 — encabezado, portada, llamado final, burbuja y barra del celular |
-| Teléfono principal (`222 186 0390`) | 5 — urgencias, contacto, pie, llamado final y barra del celular |
-| Segundo teléfono (`222 710 7383`) | 3 — urgencias, contacto y pie |
-| Correo | 2 — contacto y pie |
+| WhatsApp (`wa.me/522223273990`) | 6 — encabezado, portada, banda de horarios, llamado final, burbuja y barra del celular |
+| Teléfono (`222 327 3990`) | 5 — banda de horarios, contacto, pie, llamado final y barra del celular |
 | Facebook | 2 — contacto y pie |
 | Dirección | 2 — contacto y pie |
 
 **Además, todos esos datos aparecen otra vez en el bloque de Google al final del
-archivo** (ver el aviso de más abajo). Ahí hay que cambiarlos también.
+archivo** (ver el aviso de más abajo). Ahí hay que cambiarlos también. La dirección
+aparece una tercera vez en `js/main.js`, en las coordenadas del mapa.
 
-> En los teléfonos y el correo, el dato se escribe **dos veces en la misma línea**:
-> una en el enlace y otra en el texto que ve la persona. Cambia las dos.
+> En el teléfono, el dato se escribe **dos veces en la misma línea**: una en el
+> enlace y otra en el texto que ve la persona. Cambia las dos.
 
-### Ojo con el formato de los teléfonos
+### Ojo con el formato del teléfono
 
-Cada teléfono aparece de **dos formas distintas en la misma línea** y las dos
-tienen que coincidir:
+Aparece de **dos formas distintas en la misma línea** y las dos tienen que
+coincidir:
 
 ```html
-<a href="tel:+522221860390">222 186 0390</a>
-     ↑ así lo marca el celular      ↑ así lo lee la persona
+<a href="tel:+522223273990">222 327 3990</a>
+     ↑ así lo marca el celular     ↑ así lo lee la persona
 ```
 
-- En `href="tel:..."` va **sin espacios y con +52 adelante**: `tel:+522221860390`
-- En el texto visible va **como se lee**: `222 186 0390`
+- En `href="tel:..."` va **sin espacios y con +52 adelante**: `tel:+522223273990`
+- En el texto visible va **como se lee**: `222 327 3990`
 
 ### Ojo con WhatsApp
 
 El enlace de WhatsApp se ve así:
 
 ```
-https://wa.me/522221860390?text=Hola%2C%20vi%20su%20p%C3%A1gina%20y%20quiero%20agendar%20una%20cita.
+https://wa.me/522223273990?text=Hola%2C%20vi%20su%20p%C3%A1gina%20y%20quiero%20agendar%20una%20cita.
 ```
 
-- `522221860390` es **52** (México) + los 10 dígitos, **sin espacios ni signos**.
+- `522223273990` es **52** (México) + los 10 dígitos, **sin espacios ni signos**.
 - Lo que va después de `?text=` es el mensaje que aparece ya escrito cuando el
   paciente abre WhatsApp. Está codificado (`%20` es un espacio, `%2C` una coma).
   **Si quieres cambiar ese mensaje, dímelo y te lo codifico** — escribirlo a mano
@@ -109,8 +130,8 @@ https://wa.me/522221860390?text=Hola%2C%20vi%20su%20p%C3%A1gina%20y%20quiero%20a
 ### ¡Importante! Cambiarlo también en el bloque de Google
 
 Al final de `index.html` hay un bloque grande que empieza con
-`<script type="application/ld+json">`. Es la ficha que lee Google. **Si cambias un
-teléfono, el correo o la dirección, cámbialos también ahí.**
+`<script type="application/ld+json">`. Es la ficha que lee Google. **Si cambias el
+teléfono, la dirección o los horarios, cámbialos también ahí.**
 
 Ese bloque es delicado: una coma de más o de menos y Google lo ignora completo.
 Después de editarlo, pega el contenido en <https://validator.schema.org/> para
@@ -132,7 +153,7 @@ grandes como este:
 **Lo que SÍ puedes cambiar:** el texto que está entre `>` y `<`.
 
 ```html
-<h3 class="servicio__titulo">Odontología</h3>
+<h3 class="servicio__titulo">Odontología familiar</h3>
                             ↑ esto sí ↑
 ```
 
@@ -148,9 +169,31 @@ vuelves atrás sin drama.
 
 ---
 
+## Agregar la lista de tratamientos
+
+Hoy la sección de Servicios tiene dos tarjetas —**Odontología familiar** y
+**Odontología infantil**— con un párrafo cada una. A propósito **no lista
+tratamientos**: la clínica todavía no confirmó cuáles hace, y publicar
+"endodoncia" o "ortodoncia" sin confirmarlo es prometer algo que quizá no dan.
+
+Cuando manden la lista, dentro de cada `<article class="servicio ...">` se cambia
+el `<p class="servicio__texto">` por una lista como esta:
+
+```html
+<ul class="servicio__lista">
+  <li><span class="servicio__vineta" aria-hidden="true">·</span>Limpieza dental</li>
+  <li><span class="servicio__vineta" aria-hidden="true">·</span>Resinas</li>
+</ul>
+```
+
+Y esos mismos tratamientos se agregan en el bloque de Google del final, en
+`availableService`. Dímelo y lo hago de una sola vez en los dos lugares.
+
+---
+
 ## Activar la sección de precios
 
-La sección de precios **está hecha pero oculta**, porque los precios no estaban
+La sección de precios **está hecha pero oculta**, porque los precios no están
 confirmados. No se ve en la página publicada.
 
 Para activarla, busca en `index.html` estas dos líneas y **bórralas**:
@@ -163,8 +206,8 @@ Para activarla, busca en `index.html` estas dos líneas y **bórralas**:
 FIN OCULTO -->
 ```
 
-Al borrar esas dos líneas, la sección aparece. Para volver a ocultarla, las pones
-otra vez en el mismo lugar.
+Al borrar esas dos líneas, la sección aparece. Ojo: los montos que trae hoy son
+`$000` de relleno — hay que cambiarlos antes de destapar la sección.
 
 ### Cambiar un precio
 
@@ -173,11 +216,11 @@ Cada renglón se ve así:
 ```html
 <div class="precios__fila">
   <span class="precios__concepto">Limpieza dental</span>
-  <span class="precios__monto">$400</span>
+  <span class="precios__monto">$000</span>
 </div>
 ```
 
-Cambia `Limpieza dental` y `$400` por lo que necesites.
+Cambia `Limpieza dental` y `$000` por lo que necesites.
 
 ### Agregar un tratamiento
 
@@ -186,69 +229,70 @@ pégalo debajo del último y cambia el texto y el precio.
 
 ---
 
-## Agregar el tercer especialista (odontología)
+## Agregar otro dentista
 
-Falta esa tarjeta porque no teníamos el nombre. En `index.html`, busca
-`ESPECIALISTAS` y verás dos bloques `<article class="especialista ...">`.
-Copia uno completo, pégalo debajo y cambia tres cosas:
+Hoy hay una sola tarjeta, la del **Dr. José Manuel Garibay Martín**. Varias
+reseñas hablan de "los doctores" en plural, así que puede que falte alguien.
+
+En `index.html`, busca `ESPECIALISTAS`. Para agregar a otra persona, copia el
+bloque `<article class="especialista ...">` completo, pégalo debajo y cambia tres
+cosas:
 
 ```html
 <article class="especialista especialista--medica">
                             ↑ (1) déjalo como está para el color azul
-  <div class="especialista__inicial" aria-hidden="true">E</div>
+  <div class="especialista__inicial" aria-hidden="true">J</div>
                                        (2) la inicial del nombre ↑
   <div class="especialista__cuerpo">
-    <span class="especialista__etiqueta">Medicina general</span>
-    <h3 class="especialista__nombre">Dr. Estanislao Robles V.</h3>
-    <p class="especialista__texto">Atiende consulta médica y urgencias.</p>
+    <span class="especialista__etiqueta">Odontología familiar e infantil</span>
+    <h3 class="especialista__nombre">Dr. José Manuel Garibay Martín</h3>
+    <p class="especialista__texto">Atiende la consulta de la clínica.</p>
                                     ↑ (3) nombre, especialidad y descripción
   </div>
 </article>
 ```
 
-Los colores disponibles son `especialista--medica` (azul) y
-`especialista--nutricion` (verde).
+**Y quita la clase `equipo__grid--uno`** del `<div>` que envuelve las tarjetas: esa
+clase existe solo para que una tarjeta sola no se estire a todo el ancho. Con dos
+o más, estorba.
 
 **Sobre las fotos:** las tarjetas usan la inicial del nombre a propósito. No
 pusimos fotos de banco porque poner la cara de un modelo debajo del nombre de un
-médico real es engañoso. Cuando la clínica mande retratos de verdad, avísame y
-las cambio.
+profesional real es engañoso. Cuando la clínica mande retratos de verdad, avísame
+y las cambio.
 
 ---
 
 ## Las reseñas
 
 La sección muestra 3 reseñas **reales**, copiadas textualmente de la ficha de
-Google el 11 de agosto de 2026. Las tres son de 5 estrellas (verificado una por
+Google el 12 de agosto de 2026. Las tres son de 5 estrellas (verificado una por
 una, no supuesto):
 
-| Paciente | Fecha | De qué habla |
-|---|---|---|
-| Sharon Michelle Avila Arrieta | Julio 2026 | Odontopediatría, un año de citas, precios accesibles |
-| Mayra Almazan Reyes | Mayo 2026 | Ortodoncia en curso |
-| Myriam Muñoz | Diciembre 2025 | Extracción sin dolor a un niño de 6 años, brackets, precio |
+| Paciente | De qué habla |
+|---|---|
+| Janeth Mejía Rangel | Años de conocerlos, profesionalismo, tiempo dedicado a cada tratamiento |
+| Moni Sánchez | Los doctores explican el cómo y el porqué del tratamiento |
+| Proveedor de México | Atención rápida, amabilidad, buena ubicación |
+
+La reseña de Janeth termina en `…` porque en Google está cortada con un "Más" que
+no se puede expandir sin iniciar sesión. Los puntos suspensivos marcan el corte,
+que es lo honesto.
 
 **No corrijas la redacción de las reseñas.** Están tal cual las escribieron los
 pacientes, con sus mayúsculas y comas. Si las "arreglas", dejan de ser una cita
 textual y cualquiera puede comparar con Google.
 
-Las fechas son el mes al que equivale lo que Google muestra como "hace 3 meses",
-"hace 8 meses", etc. Son aproximadas por unas semanas, igual que en Google.
+La calificación (**4.7**) y el número de reseñas (**52**) aparecen en tres lugares:
+la tarjeta de la portada, la sección de reseñas y el bloque de Google del final.
+Si el número cambia, cámbialo en los tres. La quinta estrella está pintada al 70 %
+a propósito, para que refleje el 4.7 y no un 5 falso.
 
 ### Cambiar cuáles se muestran
 
-En la ficha de Google hay 44. Estas son las otras 5 que están publicadas, todas
-de 5 estrellas, por si prefieres alguna:
-
-- **Maria Dolores Solis Maxil** — "Buena atención hay vamos toda la familia. Hay me hicieron mi tratamiento de ortodoncia. Me quedo muy bien. Super recomendado!!!"
-- **MIGUEL ESTEBAN LEDESMA HERRERA** — "Excelente lugar, los médicos muy profesionales. Excelente servicio. Todo el personal es muy amable"
-- **angel garcia** — "Super contenta feliz con la atención de la dra fanny ella es genial en la atención, calidad de trabajo y limpieza"
-- **Fabiola Mendez** — "Me encantó todo lo hacen bien y me encantó la verdad super recomendado no te dejan con la duda te saben explicar muy bien una sonrisa hermosa"
-- **Anyii Garcia** — "La atencion es incleible buen trabajo excelente muy recomendables"
-
-Para cambiar una, en `index.html` busca `RESEÑAS REALES` y sustituye el texto, el
-nombre y la fecha de la tarjeta. Las 5 estrellas déjalas solo si la reseña
-realmente es de 5.
+En la ficha hay 52. Para cambiar una, en `index.html` busca `RESEÑAS REALES` y
+sustituye el texto y el nombre de la tarjeta. Las 5 estrellas déjalas solo si la
+reseña realmente es de 5. Si quieres que traiga más reseñas de la ficha, dímelo.
 
 > **Por qué las reseñas no están en el bloque de Google (JSON-LD):** marcar como
 > datos estructurados reseñas copiadas de otra plataforma va contra las
@@ -257,55 +301,52 @@ realmente es de 5.
 
 ---
 
-## Poner los horarios
+## Los horarios
 
-Cuando la clínica los confirme, hay que cambiarlos en **dos lugares**:
+Los horarios reales están en **tres lugares** y los tres tienen que coincidir:
 
-**1. El texto visible.** Busca `HORARIOS` en `index.html` y cambia el párrafo.
+1. **La banda azul de horarios**, a media página (busca `HORARIOS` en `index.html`).
+2. **La lista día por día** en la sección de contacto (busca `horario-lista`).
+3. **El bloque de Google** del final, en `openingHoursSpecification`.
 
-**2. La ficha de Google.** En el bloque `application/ld+json` del final, agrega
-esto justo antes de la línea que dice `"aggregateRating"`:
+Hoy dicen: lunes a jueves de 10:00 a 13:00 y de 15:00 a 18:30; viernes, sábado y
+domingo cerrado. En el bloque de Google eso se escribe en dos entradas, una por
+cada rango del día:
 
 ```json
-  "openingHoursSpecification": [
-    {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
-      "opens": "09:00",
-      "closes": "20:00"
-    },
-    {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Saturday"],
-      "opens": "09:00",
-      "closes": "14:00"
-    }
-  ],
+{
+  "@type": "OpeningHoursSpecification",
+  "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+  "opens": "10:00",
+  "closes": "13:00"
+}
 ```
 
-Cambia los días y las horas por los reales. **Fíjate en la coma del final** — tiene
-que estar. Si algo falla, mándamelo y lo reviso.
+Los días cerrados no se escriben: lo que no aparece, Google lo toma como cerrado.
 
 ---
 
-## El carrusel de la portada
+## La portada
 
-La portada muestra **5 fotos que se alternan cada 5 segundos**. Cada foto enciende
-su etiqueta correspondiente debajo de la tarjeta de reseñas:
+Hoy la portada tiene **una sola foto**. La plantilla traía cinco que se alternaban
+cada 5 segundos, pero cuatro eran de servicios que Esencia Dental no da (medicina,
+fisioterapia, nutrición y urgencias) y se quitaron.
 
-| Foto | Etiqueta que se enciende |
-|---|---|
-| Paciente en el dentista | Odontología |
-| Médico con estetoscopio | Medicina general |
-| Terapia en la pierna | Fisioterapia |
-| Nutrióloga en consultorio | Nutrición |
-| Ambulancia | Urgencias 24/7 |
+**El carrusel se enciende solo en cuanto haya más de una foto.** No hay que tocar
+el JavaScript.
 
-El emparejamiento se hace con el atributo `data-categoria`. La foto y su etiqueta
-tienen que tener **exactamente el mismo valor**. Si cambias uno, cambia el otro.
+### Agregar fotos y recuperar el carrusel
 
-Se detiene solo cuando la pestaña pasa a segundo plano, y no se mueve si la
-persona tiene activado "reducir movimiento" en su sistema.
+En `index.html`, busca `FOTO DE PORTADA`. Copia el bloque `<picture>` tantas veces
+como fotos tengas. En todas menos la primera, cambia `src` y `srcset` por
+`data-src` y `data-srcset`, y quítales `fetchpriority="high"` — así el JavaScript
+las carga después y la portada aparece rápido.
+
+Cada foto se empareja con su etiqueta por el atributo `data-categoria`: la foto y
+su etiqueta tienen que tener **exactamente el mismo valor**. Y en las etiquetas,
+deja `is-activa` solo en la primera (hoy las tres la tienen porque no rotan).
+
+Si te suena a que se rompe fácil, mándame las fotos y lo hago yo.
 
 ### Cambiar cada cuánto rotan
 
@@ -315,35 +356,18 @@ En `js/main.js`, la tercera línea de código:
 var SEGUNDOS_POR_FOTO = 5;
 ```
 
-### Cambiar el orden
+### Procesar una foto nueva
 
-En `index.html`, busca `FOTOS DE PORTADA`. Reordena los bloques `<picture>` y
-reordena **igual** las etiquetas de `hero-etiquetas`. **La primera foto es la que
-se ve al cargar**, así que ahí va la especialidad más importante para el negocio
-(hoy: odontología, porque "dentista en Cholula" es la búsqueda que más trae gente).
-
-> Ojo: solo la primera foto lleva `src` normal. Las otras cuatro llevan `data-src`
-> y las carga el JavaScript después. Si mueves una foto al primer lugar, hay que
-> cambiar sus `data-src`/`data-srcset` por `src`/`srcset` y ponerle
-> `fetchpriority="high"`. **Eso mejor dímelo y lo hago yo**, es fácil de romper.
-
-### Cambiar o agregar una foto
-
-Las originales que me pasaste están guardadas en la carpeta **`fotos originales/`**,
-al lado de `sitio/`. No se publican: pesaban 10 MB entre las cinco y habrían hecho
-la página lentísima en celular. Las versiones que sí se usan están en
-`sitio/img/hero/` y pesan **174 KB las cinco juntas**.
-
-Para procesar una foto nueva, ponla en `fotos originales/` y ejecuta esto en la
-Terminal desde la carpeta `sitio`:
+Las fotos de la portada están optimizadas en dos tamaños y dos formatos. Para
+procesar una nueva, ponla en una carpeta al lado del sitio y ejecuta esto en la
+Terminal, desde la carpeta del sitio:
 
 ```bash
-python3 -c "from PIL import Image, ImageOps; im=ImageOps.exif_transpose(Image.open('../fotos originales/NOMBRE.jpg')).convert('RGB'); [im.resize((w, round(im.height*w/im.width)), Image.LANCZOS).save(f'img/hero/CATEGORIA-{w}.{e}', **k) for w in (900,1800) for e,k in (('webp',dict(quality=78,method=6)),('jpg',dict(quality=80,optimize=True,progressive=True)))]"
+python3 -c "from PIL import Image, ImageOps; im=ImageOps.exif_transpose(Image.open('../fotos/NOMBRE.jpg')).convert('RGB'); [im.resize((w, round(im.height*w/im.width)), Image.LANCZOS).save(f'img/hero/CATEGORIA-{w}.{e}', **k) for w in (900,1800) for e,k in (('webp',dict(quality=78,method=6)),('jpg',dict(quality=80,optimize=True,progressive=True)))]"
 ```
 
-Cambia `NOMBRE.jpg` por el archivo y `CATEGORIA` por el nombre corto
-(`odontologia`, `medicina`, `fisioterapia`, `nutricion` o `urgencias`).
-Si es una categoría nueva, además hay que agregar el bloque en el HTML — dímelo.
+Cambia `NOMBRE.jpg` por el archivo y `CATEGORIA` por el nombre corto que uses en
+`data-categoria` (hoy: `odontologia`).
 
 ### El encuadre en celular
 
@@ -359,33 +383,35 @@ foto queda mal encuadrada en el celular, mueve ese porcentaje.
 
 ### Sobre el texto alternativo
 
-Las 5 fotos llevan `alt=""` a propósito. Son decoración: lo que comunica las
-especialidades son las etiquetas de texto, que sí las leen Google y los lectores
-de pantalla. Si les pusiéramos descripción, un lector de pantalla leería las cinco
-seguidas y sería ruido.
+La foto lleva `alt=""` a propósito. Es decoración: lo que comunica los servicios
+son las etiquetas de texto, que sí las leen Google y los lectores de pantalla.
 
 ---
 
-## Fotos reales de la clínica
+## Los colores
 
-Las 5 de la portada son de banco. Siguen siendo lo correcto para ilustrar cada
-especialidad, pero **una foto real de la fachada y de la recepción convierte
-mejor**, porque el paciente reconoce el lugar al que va a llegar. Vale la pena
-insistirle al cliente: son gratis.
+Todos los colores viven en un solo lugar: `css/styles.css`, sección **2. VARIABLES**,
+arriba del todo. Cambias ahí el valor y cambia toda la página.
 
-Cuando lleguen, se sustituyen con el mismo comando de arriba. Medidas útiles:
+Hoy siguen siendo los azules de la plantilla. **Falta pasarlos al turquesa de la
+marca de Esencia Dental.** Las variables que mandan son `--azul-medio` (el color de
+acento, botones y enlaces), `--azul-oscuro` (texto), `--azul-navy` (fondo de la
+sección de reseñas) y los `--fondo-*` (fondos suaves de las tarjetas).
 
-| Dónde | Proporción | Tamaño mínimo |
-|---|---|---|
-| Portada | 16:9 (horizontal) | 1600 × 900 px |
-| Retratos de especialistas | 4:5 (vertical) | 800 × 1000 px |
+Al cambiarlos, hay que cambiar también dos cosas fuera del CSS:
+- `<meta name="theme-color">` en el `<head>` de `index.html`
+- `theme_color` y `background_color` en `site.webmanifest`
+
+Al final de `css/styles.css` hay una sección **17. AJUSTES DE ESENCIA DENTAL** con
+todo lo que se agregó respecto a la plantilla original, por si hay que revisarlo.
 
 ---
 
 ## La imagen que se ve al compartir por WhatsApp
 
 Es `img/og-image.jpg` (1200 × 630 px). Es la que aparece cuando alguien pega el
-enlace del sitio en WhatsApp, Facebook o Messenger.
+enlace del sitio en WhatsApp, Facebook o Messenger. **Hoy todavía es la de la
+clínica que se usó como plantilla: hay que reemplazarla.**
 
 Si la cambias, **respeta esas medidas exactas** y avísame para actualizar las
 etiquetas del `<head>`.
@@ -400,7 +426,7 @@ etiquetas del `<head>`.
 
 ### La primera vez
 
-1. Sube esta carpeta a un repositorio en GitHub.
+1. El sitio ya está en GitHub: <https://github.com/uvalek/escenciadentalweb>
 2. Entra a <https://vercel.com>, haz clic en **Add New → Project** e importa ese
    repositorio.
 3. En **Framework Preset** elige **Other**. Deja vacíos "Build Command" y
@@ -411,14 +437,11 @@ etiquetas del `<head>`.
 
 Guardas el archivo, lo subes a GitHub, y Vercel publica solo. No hay más pasos.
 
-### Cuando contrates un dominio propio
+### La dirección del sitio
 
-En Vercel: **Settings → Domains → Add**, escribe el dominio y sigue las
-instrucciones para apuntar los DNS.
-
-Después hay que cambiar la dirección en el sitio. Busca `DOMINIO` en los archivos
-y cambia `https://clinica-especialidades-cholula.vercel.app` por el nuevo dominio.
-Está en **9 lugares**:
+El sitio trae puesta `https://esenciadental.vercel.app` como dirección provisional.
+**En cuanto Vercel dé la real (o se contrate un dominio propio), hay que
+cambiarla.** Busca `DOMINIO` en los archivos. Está en **9 lugares**:
 
 | Archivo | Cuántas veces |
 |---|---|
@@ -435,41 +458,28 @@ desapercibido y tumba el SEO.
 ## Después de publicar: lo que sí mueve la aguja
 
 Para "dentista en Cholula", **Google Maps decide más que el sitio web.** Revisé la
-ficha el 11 de agosto de 2026 y encontré tres cosas que valen más que cualquier
-ajuste a la página:
+ficha el 12 de agosto de 2026:
 
-**1. La ficha NO tiene sitio web.** Dice "Agregar sitio web". En cuanto publiquemos,
-hay que pegar la dirección ahí. Es gratis y es el enlace que más tráfico va a traer.
+**1. La ficha NO tiene sitio web.** Dice "Agregar sitio web". En cuanto
+publiquemos, hay que pegar la dirección ahí. Es gratis y es el enlace que más
+tráfico va a traer. Es lo primero que hay que hacer.
 
-**2. La categoría principal en Google es "Médico de urgencias", no "Dentista".**
-Eso explica mucho: cuando alguien busca "dentista en Cholula", Google prioriza los
-negocios cuya categoría principal es Dentista. Los cinco competidores que Google
-muestra al lado de la ficha están todos categorizados como "Dentista":
+**2. La categoría ya es "Dentista"**, que es la correcta. Nada que cambiar.
 
-| Competidor | Calificación |
-|---|---|
-| Dental Room Cholula | 4.9 (41 reseñas) |
-| Smile Consultorio Dental CY | 4.9 (16) |
-| Artedental | 5.0 (5) |
-| Consultorio dental Beauty Dent | 4.7 (7) |
-| Clínica Dental Mat | 4.7 (13) |
+**3. La ficha está bien cuidada:** 4.7 con 52 reseñas y el propietario responde.
+Eso es una base buena; conviene seguir pidiendo reseñas a los pacientes que salen
+contentos.
 
-Como la mayoría de las reseñas hablan de odontología, ortodoncia y odontopediatría,
-tiene sentido cambiar la categoría principal a **Dentista** y dejar "Médico de
-urgencias" como categoría secundaria. Eso lo decide la clínica, pero es la palanca
-más grande que vi.
-
-**3. La ficha no tiene horarios publicados.** Google lo penaliza y los pacientes lo
-buscan. En cuanto los tengas, van en la ficha y en la página.
+**4. El teléfono de la ficha y el que dio el cliente no coinciden.** Hay que
+resolverlo (ver el aviso del principio).
 
 Después de eso:
 
-4. **Dar de alta el sitio** en <https://search.google.com/search-console> y enviar
+5. **Dar de alta el sitio** en <https://search.google.com/search-console> y enviar
    el `sitemap.xml`.
-5. **Poner el enlace del sitio** también en el Facebook de la clínica.
-6. **Fotos reales** de la clínica, en la ficha y en la web.
-7. **Seguir respondiendo las reseñas** — ya lo hacen bien, todas las que revisé
-   tienen respuesta del propietario.
+6. **Poner el enlace del sitio** también en el Facebook de la clínica.
+7. **Fotos reales** de la clínica (fachada, recepción, consultorio), en la ficha y
+   en la web. Una foto del lugar real convierte mejor que cualquier foto de banco.
 
 ---
 
@@ -486,17 +496,18 @@ Si necesitas cambiar algo de esa lista, dime qué quieres lograr y lo hago.
 
 ---
 
-## Pendientes con la clínica
+## Pendientes
 
 | # | Qué falta | Por qué importa |
 |---|---|---|
-| 1 | **Confirmar que el 222 186 0390 tiene WhatsApp activo** | Todo el sitio apunta ahí. Es lo más urgente |
-| 2 | Horarios de atención por día | Google los usa y los pacientes los buscan |
-| 3 | Fotos reales (fachada, recepción, equipo) | Las de la portada son de banco; una foto del lugar real convierte mejor |
-| 4 | **Cambiar la categoría principal de la ficha a "Dentista"** | Hoy es "Médico de urgencias". Es la palanca más grande para "dentista en Cholula" |
-| 5 | **Poner la dirección del sitio en la ficha de Google** | La ficha no tiene sitio web. Gratis, y es de donde va a venir el tráfico |
-| 6 | Confirmar los 4 precios para activar esa sección | Está lista, solo oculta |
-| 7 | **¿La odontóloga es la "Dra. Fanny" de las reseñas?** | Dos pacientes la nombran y coincide con el correo de contacto. Casi seguro, pero no publico el nombre de una profesional de salud por deducción |
-| 8 | Apellido de la Nutrióloga María Elena | Completa su tarjeta |
-| 9 | Aviso de privacidad | Si más adelante se agrega un formulario, es obligatorio |
-| 10 | Validar tres frases: urgencias **a domicilio**, cobertura de **zona conurbada**, y "confirmamos horario" | Están escritas como hechos y no venían en el brief original |
+| 1 | **El logo de Esencia Dental** (`img/logo.svg`, `img/logo-blanco.svg`, `favicon.svg`, iconos) | Hoy se ve el logo de la clínica que se usó como plantilla. Es lo más urgente |
+| 2 | **Foto de portada** e **imagen para compartir** (`img/og-image.jpg`) | Mismo caso: siguen siendo de la otra clínica |
+| 3 | **Pasar los colores al turquesa de la marca** | Hoy la página es azul; la marca es turquesa |
+| 4 | **Resolver cuál es el teléfono bueno**: 222 327 3990 (Google) o 222 126 1476 (el que pasó el cliente) | Todo el sitio y toda la ficha apuntan a un número. Si es el equivocado, no llega nadie |
+| 5 | Confirmar que ese número **tiene WhatsApp activo** | Es el botón principal de toda la página |
+| 6 | Lista real de tratamientos | Hoy solo dice "odontología familiar e infantil" |
+| 7 | Precios, para activar esa sección | Está lista, solo oculta |
+| 8 | ¿Hay más dentistas además del Dr. Garibay? | Varias reseñas hablan de "los doctores" en plural |
+| 9 | Correo de contacto e Instagram | Hoy la sección de contacto solo tiene teléfono y Facebook |
+| 10 | Confirmar que el Facebook `@esenciadentalfam` es el oficial | Está publicado en el sitio y en el marcado de Google |
+| 11 | Aviso de privacidad | Si más adelante se agrega un formulario, es obligatorio |

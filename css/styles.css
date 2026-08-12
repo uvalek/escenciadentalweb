@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Clínica de Especialidades Médicas & Dentales — San Pedro Cholula, Puebla
+   Esencia Dental — Odontología Familiar — San Pedro Cholula, Puebla
    --------------------------------------------------------------------------
    Estructura del archivo:
      1. Fuentes
@@ -17,6 +17,8 @@
     13. Llamado final
     14. Pie de página
     15. Botones flotantes (WhatsApp y barra móvil)
+    16. Animaciones
+    17. Ajustes de Esencia Dental  <-- lo que se cambió respecto a la plantilla
    ========================================================================== */
 
 
@@ -1296,3 +1298,57 @@ button:focus-visible {
   body { padding-bottom: 76px; }
   .hero__inner { padding-bottom: 84px; }
 }
+
+
+/* ==========================================================================
+   17. AJUSTES DE ESENCIA DENTAL
+   --------------------------------------------------------------------------
+   Lo que esta clínica necesita y la plantilla no traía. Va al final para que
+   se vea de un vistazo qué se cambió respecto al sitio original.
+   ========================================================================== */
+
+/* Tarjeta de servicio con párrafo en vez de lista de tratamientos.
+   Cuando la clínica dé su lista real, se puede volver a usar
+   <ul class="servicio__lista"> y borrar este párrafo. */
+.servicio__texto {
+  font-size: 16.5px;
+  line-height: 1.55;
+  color: var(--texto-lista);
+}
+
+/* Un solo especialista: sin esto la tarjeta se estiraría a todo el ancho */
+.equipo__grid--uno {
+  grid-template-columns: minmax(min(100%, 290px), 520px);
+  justify-content: center;
+}
+
+/* La banda roja de urgencias de la plantilla, reconvertida en horarios.
+   Esencia Dental no da urgencias 24/7, así que el rojo de alarma sobraba. */
+.urgencias--horario { background: var(--azul-medio); }
+.urgencias--horario .tel-boton--principal { color: var(--azul-medio); }
+.urgencias--horario .tel-boton--principal:hover {
+  background: var(--fondo-dental);
+  color: var(--azul-medio-osc);
+}
+
+/* Horarios día por día, dentro del bloque de contacto */
+.horario-lista {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.horario-lista li {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 12px;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 16px;
+  line-height: 1.45;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--borde);
+}
+.horario-lista li:last-child { border-bottom: 0; padding-bottom: 0; }
+.horario-lista span { color: var(--texto-secundario); }
+.horario-lista strong { color: var(--azul-oscuro); font-weight: 700; }

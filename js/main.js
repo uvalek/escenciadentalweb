@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Clínica de Especialidades Médicas & Dentales
+   Esencia Dental — Odontología Familiar
    --------------------------------------------------------------------------
    Siete cosas, nada más:
      1. Menú desplegable en móvil
@@ -105,9 +105,9 @@
     botonMapa.addEventListener('click', function () {
       var iframe = document.createElement('iframe');
       iframe.src = 'https://maps.google.com/maps?q=' +
-        encodeURIComponent('Clínica de Especialidades Médicas & Dentales, Av. Miguel Alemán 2008, San Pablo Tecamac, 72750 San Pedro Cholula, Pue.') +
-        '&z=16&output=embed';
-      iframe.title = 'Mapa de la Clínica de Especialidades Médicas y Dentales';
+        encodeURIComponent('19.065525,-98.3195008') +
+        '&z=17&output=embed';
+      iframe.title = 'Mapa de Esencia Dental — 15 Sur 502-B, San Pedro Cholula';
       iframe.loading = 'lazy';
       iframe.referrerPolicy = 'no-referrer-when-downgrade';
       iframe.setAttribute('allowfullscreen', '');
