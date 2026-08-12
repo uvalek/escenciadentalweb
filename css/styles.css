@@ -54,44 +54,49 @@
    ========================================================================== */
 
 :root {
-  /* Azules de marca */
-  --azul-oscuro:      #12324F;  /* texto principal */
-  --azul-navy:        #0C2438;  /* fondo de secciones oscuras */
-  --azul-medio:       #1B6FA8;  /* color de acento y enlaces */
-  --azul-medio-osc:   #12324F;  /* acento en hover */
-  --azul-claro:       #2E9BD4;  /* odontología */
-  --azul-celeste:     #7CCBEA;  /* hover sobre fondo oscuro */
+  /* --------------------------------------------------------------------
+     Colores de la marca Esencia Dental: turquesa, azul claro, negro y
+     blanco. Los dos turquesas de la marca son claros, así que llevan
+     SIEMPRE texto negro encima. Para texto turquesa sobre blanco (enlaces,
+     iconos) se usa --turquesa-osc, que es el mismo color oscurecido hasta
+     que se lee bien; el turquesa de marca sobre blanco no se lee.
+     -------------------------------------------------------------------- */
 
-  /* Colores por área */
-  --area-dental:      #2E9BD4;
-  --area-medica:      #1B6FA8;
-  --area-fisio:       #17958F;
-  --area-nutricion:   #4E9E5F;
-  --area-nutricion-t: #3F8850;  /* versión con contraste para texto */
+  /* Marca */
+  --turquesa:         #6BC2D4;  /* turquesa del logo */
+  --azul-claro-marca: #B0DBEB;  /* azul claro del logo */
+
+  --azul-oscuro:      #0F1518;  /* negro de marca — texto principal */
+  --azul-navy:        #0B1013;  /* negro — fondo de secciones oscuras */
+  --turquesa-osc:     #0C7181;  /* acento y enlaces — contraste 5.7:1 en blanco */
+  --azul-medio:       #0C7181;  /* alias de --turquesa-osc (lo usa media hoja) */
+  --azul-medio-osc:   #095663;  /* acento en hover */
+  --azul-celeste:     #B0DBEB;  /* enlaces sobre fondo negro */
+
+  /* Colores por área de servicio */
+  --area-dental:      #6BC2D4;
+  --area-medica:      #0C7181;
 
   /* Fondos suaves */
-  --fondo-dental:     #F0F8FD;
-  --fondo-medica:     #EDF4FA;
-  --fondo-fisio:      #EDF7F6;
-  --fondo-nutricion:  #F0F7EE;
-  --fondo-suave:      #F3F8FC;
-  --fondo-etiqueta:   #EAF4FB;
+  --fondo-dental:     #EFFAFC;
+  --fondo-medica:     #E7F5F8;
+  --fondo-suave:      #F2FAFC;
+  --fondo-etiqueta:   #E4F4F9;
 
   /* Texto */
-  --texto-secundario: #4A6480;  /* párrafos secundarios — contraste 6.1:1 */
-  --texto-terciario:  #5C7590;  /* etiquetas pequeñas — contraste 4.8:1 */
-  --texto-lista:      #33526F;
+  --texto-secundario: #4A5C62;  /* párrafos secundarios — contraste 7:1 */
+  --texto-terciario:  #5A6E75;  /* etiquetas pequeñas — contraste 5.3:1 */
+  --texto-lista:      #2B3A40;
 
   /* Bordes */
-  --borde:            #E3EDF5;
-  --borde-suave:      #EFF5FA;
+  --borde:            #DBEDF2;
+  --borde-suave:      #EDF7FA;
 
   /* Acciones */
-  --whatsapp:         #128C4B;
-  --whatsapp-hover:   #0E7540;
-  --urgencias:        #C6392C;
-  --urgencias-hover:  #A32A1F;
-  --estrella:         #F0A72A;
+  --whatsapp:         #107A43;  /* verde de WhatsApp, un punto más oscuro para
+                                   que la letra blanca del botón se lea (4.5:1) */
+  --whatsapp-hover:   #0C6236;
+  --estrella:         #F0A72A;  /* ámbar de las estrellas de Google */
 
   /* Medidas */
   --ancho-max:        1320px;
@@ -244,7 +249,10 @@ button:focus-visible {
 .btn--whatsapp { background: var(--whatsapp); color: #ffffff; }
 .btn--whatsapp:hover { background: var(--whatsapp-hover); color: #ffffff; }
 
-.btn--azul { background: var(--azul-medio); color: #ffffff; }
+/* Botón principal de la marca: turquesa con letra negra. El turquesa del logo
+   es demasiado claro para llevar letra blanca encima — así se lee bien y es
+   el color exacto de la marca, no una versión apagada. */
+.btn--azul { background: var(--turquesa); color: var(--azul-oscuro); }
 .btn--azul:hover { background: var(--azul-oscuro); color: #ffffff; }
 
 .btn--blanco { background: #ffffff; color: var(--azul-navy); }
@@ -319,7 +327,7 @@ button:focus-visible {
   border-radius: 14px;
   flex-shrink: 0;
 }
-.site-header__toggle:hover { background: #DCEBF7; }
+.site-header__toggle:hover { background: var(--fondo-etiqueta); }
 .site-header__toggle .icono-cerrar { display: none; }
 .site-header__toggle[aria-expanded="true"] .icono-menu { display: none; }
 .site-header__toggle[aria-expanded="true"] .icono-cerrar { display: block; }
@@ -342,7 +350,7 @@ button:focus-visible {
     padding: 10px var(--margen-lateral) 18px;
     background: #ffffff;
     border-bottom: 1px solid var(--borde);
-    box-shadow: 0 18px 34px rgba(9, 28, 45, .12);
+    box-shadow: 0 18px 34px rgba(11, 16, 19, .12);
     max-height: calc(100vh - var(--alto-header));
     overflow-y: auto;
   }
@@ -411,13 +419,13 @@ button:focus-visible {
   inset: 0;
   background:
     linear-gradient(100deg,
-      rgba(9, 28, 45, .84) 0%,
-      rgba(9, 28, 45, .58) 44%,
-      rgba(9, 28, 45, .10) 74%),
+      rgba(11, 16, 19, .84) 0%,
+      rgba(11, 16, 19, .58) 44%,
+      rgba(11, 16, 19, .10) 74%),
     linear-gradient(180deg,
-      rgba(12, 36, 56, .52) 0%,
-      rgba(12, 36, 56, .42) 40%,
-      rgba(12, 36, 56, .92) 100%);
+      rgba(11, 16, 19, .52) 0%,
+      rgba(11, 16, 19, .42) 40%,
+      rgba(11, 16, 19, .92) 100%);
   pointer-events: none;
 }
 
@@ -425,9 +433,9 @@ button:focus-visible {
   /* En vertical el texto ocupa todo el ancho, así que el velo va parejo */
   .hero__velo {
     background: linear-gradient(180deg,
-      rgba(9, 28, 45, .82) 0%,
-      rgba(9, 28, 45, .72) 45%,
-      rgba(9, 28, 45, .93) 100%);
+      rgba(11, 16, 19, .82) 0%,
+      rgba(11, 16, 19, .72) 45%,
+      rgba(11, 16, 19, .93) 100%);
   }
 }
 
@@ -484,7 +492,7 @@ button:focus-visible {
 .tag {
   padding: 11px 18px;
   border-radius: 999px;
-  background: rgba(9, 28, 45, .55);
+  background: rgba(11, 16, 19, .55);
   border: 1px solid rgba(255, 255, 255, .32);
   color: rgba(255, 255, 255, .92);
   font-size: 14px;
@@ -507,11 +515,11 @@ button:focus-visible {
   border-color: #ffffff;
   color: var(--azul-oscuro);
   transform: translateY(-1px) scale(1.045);
-  box-shadow: 0 10px 26px rgba(9, 28, 45, .34);
+  box-shadow: 0 10px 26px rgba(11, 16, 19, .34);
 }
 .tag--urgencias.is-activa {
-  background: var(--urgencias);
-  border-color: var(--urgencias);
+  background: var(--turquesa-osc);
+  border-color: var(--turquesa-osc);
   color: #ffffff;
   box-shadow: 0 10px 28px rgba(198, 57, 44, .55);
 }
@@ -528,7 +536,7 @@ button:focus-visible {
   background: #ffffff;
   border-radius: var(--radio-medio);
   padding: 24px 26px;
-  box-shadow: 0 24px 60px rgba(9, 28, 45, .28);
+  box-shadow: 0 24px 60px rgba(11, 16, 19, .28);
 }
 .rating-card__fila { display: flex; align-items: center; gap: 14px; }
 .rating-card__nota {
@@ -621,8 +629,6 @@ button:focus-visible {
 }
 .servicio--dental    { background: var(--fondo-dental); }
 .servicio--medica    { background: var(--fondo-medica); }
-.servicio--fisio     { background: var(--fondo-fisio); }
-.servicio--nutricion { background: var(--fondo-nutricion); }
 
 .servicio__cabecera { display: flex; align-items: center; gap: 18px; }
 
@@ -635,10 +641,8 @@ button:focus-visible {
   justify-content: center;
   flex-shrink: 0;
 }
-.servicio--dental    .servicio__icono { background: var(--area-dental); }
+.servicio--dental    .servicio__icono { background: var(--turquesa); color: var(--azul-oscuro); }
 .servicio--medica    .servicio__icono { background: var(--area-medica); }
-.servicio--fisio     .servicio__icono { background: var(--area-fisio); }
-.servicio--nutricion .servicio__icono { background: var(--area-nutricion); }
 
 .servicio__area {
   font-size: 12px;
@@ -646,10 +650,8 @@ button:focus-visible {
   letter-spacing: .12em;
   text-transform: uppercase;
 }
-.servicio--dental    .servicio__area { color: var(--area-dental); }
+.servicio--dental    .servicio__area { color: var(--turquesa-osc); }
 .servicio--medica    .servicio__area { color: var(--area-medica); }
-.servicio--fisio     .servicio__area { color: var(--area-fisio); }
-.servicio--nutricion .servicio__area { color: var(--area-nutricion-t); }
 
 .servicio__titulo {
   font-size: clamp(23px, 2.4vw, 30px);
@@ -671,9 +673,8 @@ button:focus-visible {
   color: var(--texto-lista);
 }
 .servicio__vineta { font-weight: 700; }
-.servicio--dental    .servicio__vineta { color: var(--area-dental); }
+.servicio--dental    .servicio__vineta { color: var(--turquesa-osc); }
 .servicio--medica    .servicio__vineta { color: var(--area-medica); }
-.servicio--nutricion .servicio__vineta { color: var(--area-nutricion-t); }
 
 /* Lista con subtítulos en negrita (fisioterapia) */
 .servicio__lista--detalle { display: flex; flex-direction: column; gap: 14px; }
@@ -717,7 +718,7 @@ button:focus-visible {
   background: #ffffff;
   border-radius: 32px;
   padding: clamp(12px, 2vw, 20px);
-  box-shadow: 0 18px 48px rgba(18, 50, 79, .07);
+  box-shadow: 0 18px 48px rgba(11, 16, 19, .07);
 }
 .precios__fila {
   display: flex;
@@ -773,7 +774,6 @@ button:focus-visible {
   color: #ffffff;
 }
 .especialista--medica    .especialista__inicial { background: var(--area-medica); }
-.especialista--nutricion .especialista__inicial { background: var(--area-nutricion); }
 
 .especialista__cuerpo {
   padding: 26px 26px 30px;
@@ -791,7 +791,6 @@ button:focus-visible {
   font-weight: 700;
 }
 .especialista--medica    .especialista__etiqueta { background: var(--fondo-medica); color: var(--area-medica); }
-.especialista--nutricion .especialista__etiqueta { background: var(--fondo-nutricion); color: var(--area-nutricion-t); }
 
 .especialista__nombre { font-size: 23px; font-weight: 700; letter-spacing: -.02em; }
 .especialista__texto { font-size: 15.5px; line-height: 1.55; color: var(--texto-secundario); }
@@ -870,7 +869,7 @@ button:focus-visible {
    11. URGENCIAS
    ========================================================================== */
 
-.urgencias { background: var(--urgencias); color: #ffffff; }
+.urgencias { background: var(--turquesa-osc); color: #ffffff; }
 .urgencias__inner {
   max-width: var(--ancho-max);
   margin: 0 auto;
@@ -924,8 +923,8 @@ button:focus-visible {
   border-radius: var(--radio-chico);
   font-weight: 800;
 }
-.tel-boton--principal { background: #ffffff; color: var(--urgencias); }
-.tel-boton--principal:hover { background: #FFF1EF; color: var(--urgencias-hover); }
+.tel-boton--principal { background: #ffffff; color: var(--turquesa-osc); }
+.tel-boton--principal:hover { background: var(--fondo-dental); color: var(--azul-medio-osc); }
 .tel-boton--secundario {
   background: rgba(255, 255, 255, .16);
   border: 1px solid rgba(255, 255, 255, .45);
@@ -975,7 +974,7 @@ button:focus-visible {
   padding: 0;
   margin: 0;
   cursor: pointer;
-  background: linear-gradient(160deg, #E7F1F9 0%, #F3F8FC 100%);
+  background: linear-gradient(160deg, #E4F4F9 0%, #F2FAFC 100%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -987,7 +986,7 @@ button:focus-visible {
   font-weight: 700;
   min-height: 420px;
 }
-.mapa__previa:hover { background: linear-gradient(160deg, #DCEBF7 0%, #EAF4FB 100%); }
+.mapa__previa:hover { background: linear-gradient(160deg, #D6EFF6 0%, #E7F6FA 100%); }
 .mapa__previa span { max-width: 26ch; text-align: center; line-height: 1.5; }
 .mapa__previa small {
   font-weight: 500;
@@ -1146,7 +1145,7 @@ button:focus-visible {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 14px 34px rgba(9, 28, 45, .3);
+  box-shadow: 0 14px 34px rgba(11, 16, 19, .3);
   animation: pulso 2.6s infinite;
 }
 .wa-flotante:hover { background: var(--whatsapp-hover); color: #ffffff; }
@@ -1246,12 +1245,12 @@ button:focus-visible {
 }
 .servicio:hover {
   transform: translateY(-5px);
-  box-shadow: 0 20px 44px rgba(18, 50, 79, .11);
+  box-shadow: 0 20px 44px rgba(11, 16, 19, .11);
 }
 .especialista:hover {
   transform: translateY(-5px);
-  border-color: var(--azul-claro);
-  box-shadow: 0 20px 44px rgba(18, 50, 79, .13);
+  border-color: var(--turquesa);
+  box-shadow: 0 20px 44px rgba(11, 16, 19, .13);
 }
 .resena:hover {
   transform: translateY(-4px);

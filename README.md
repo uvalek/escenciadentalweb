@@ -7,12 +7,10 @@ WhatsApp.
 Está hecha con HTML, CSS y JavaScript normales. **No hay que compilar ni instalar
 nada.** Editas un archivo, lo guardas, lo subes y ya está en línea.
 
-> ⚠️ **Antes de publicar como sitio final, faltan tres cosas** que todavía son de
-> la clínica que se usó como plantilla: el **logo** (`img/logo.svg` y
-> `img/logo-blanco.svg`), la **foto de portada** (`img/hero/odontologia-*`) y la
-> **imagen para compartir por WhatsApp** (`img/og-image.jpg`). Los textos, los
-> datos de contacto, los horarios y las reseñas ya son los reales de Esencia
-> Dental. Ver *Pendientes* al final.
+> ⚠️ **Lo único que todavía no es de Esencia Dental es la foto de la portada.**
+> Es una foto de banco que venía en la plantilla. Los textos, los datos de
+> contacto, los horarios, las reseñas, el logo y los colores ya son los reales.
+> Ver *Pendientes* al final.
 
 ---
 
@@ -65,6 +63,7 @@ cambios que hiciste.
 | `css/styles.css` | Los colores, tamaños y espacios. Solo si quieres cambiar el aspecto |
 | `js/main.js` | El menú del celular, el mapa y el carrusel de la portada |
 | `img/` | Logos, iconos y la imagen que se ve al compartir por WhatsApp |
+| `img/esenciadentalogo.svg` | **El logo original tal como lo entregó el cliente.** No se toca: de ahí salen los demás |
 | `img/hero/` | Las fotos de la portada, ya optimizadas. **No editar a mano** |
 | `fonts/` | Los tipos de letra. No tocar |
 | `vercel.json`, `robots.txt`, `sitemap.xml`, `site.webmanifest` | Configuración. No tocar salvo lo que dice más abajo |
@@ -388,30 +387,77 @@ son las etiquetas de texto, que sí las leen Google y los lectores de pantalla.
 
 ---
 
-## Los colores
+## Los colores y el logo
 
-Todos los colores viven en un solo lugar: `css/styles.css`, sección **2. VARIABLES**,
-arriba del todo. Cambias ahí el valor y cambia toda la página.
+### Los colores
 
-Hoy siguen siendo los azules de la plantilla. **Falta pasarlos al turquesa de la
-marca de Esencia Dental.** Las variables que mandan son `--azul-medio` (el color de
-acento, botones y enlaces), `--azul-oscuro` (texto), `--azul-navy` (fondo de la
-sección de reseñas) y los `--fondo-*` (fondos suaves de las tarjetas).
+Todos los colores viven en un solo lugar: `css/styles.css`, sección
+**2. VARIABLES**, arriba del todo. Cambias ahí el valor y cambia toda la página.
 
-Al cambiarlos, hay que cambiar también dos cosas fuera del CSS:
+La paleta ya es la de la marca: turquesa, azul claro, negro y blanco.
+
+| Variable | Color | Dónde se ve |
+|---|---|---|
+| `--turquesa` | `#6BC2D4` | El turquesa del logo. Botón "Agenda una cita", icono de odontología familiar |
+| `--azul-claro-marca` | `#B0DBEB` | El azul claro del logo. Enlaces sobre fondo negro |
+| `--turquesa-osc` | `#0C7181` | Enlaces, iconos, banda de horarios. Ver el aviso de abajo |
+| `--azul-oscuro` | `#0F1518` | El negro de la marca: todo el texto |
+| `--azul-navy` | `#0B1013` | Fondo de la sección de reseñas y del pie |
+
+> **Por qué hay dos turquesas.** El turquesa del logo es claro: sobre blanco
+> casi no se lee (contraste 2:1, cuando el mínimo legal de accesibilidad es
+> 4.5:1). Por eso el turquesa de marca se usa **como fondo, con letra negra
+> encima**, y para texto turquesa sobre blanco se usa `--turquesa-osc`, que es
+> el mismo color oscurecido hasta que se lee bien. Si cambias uno, revisa el
+> otro. Todo el sitio pasó una revisión de contraste después del cambio.
+
+El verde de los botones de WhatsApp **no es parte de la paleta**: es el verde
+de WhatsApp y se deja a propósito, porque la gente reconoce el botón por el
+color antes de leerlo.
+
+Si cambias los colores, cámbialos también en:
 - `<meta name="theme-color">` en el `<head>` de `index.html`
 - `theme_color` y `background_color` en `site.webmanifest`
+- Los dos `stroke="#0C7181"` de los iconos de dirección y horarios en `index.html`
 
-Al final de `css/styles.css` hay una sección **17. AJUSTES DE ESENCIA DENTAL** con
-todo lo que se agregó respecto a la plantilla original, por si hay que revisarlo.
+Al final de `css/styles.css` hay una sección **17. AJUSTES DE ESENCIA DENTAL**
+con todo lo que se agregó respecto a la plantilla original.
+
+### El logo
+
+El original del cliente es `img/esenciadentalogo.svg` y **no se toca**. De ahí
+salen, con el script `gen-logos.py`, las cuatro versiones que usa el sitio:
+
+| Archivo | Qué es | Dónde se usa |
+|---|---|---|
+| `img/logo.svg` | Horizontal (marca + nombre en línea), letra negra | Encabezado |
+| `img/logo-blanco.svg` | El mismo, en blanco | Pie de página |
+| `img/logo-vertical.svg` | El lockup original, apilado | No se usa en el sitio; queda por si hace falta |
+| `favicon.svg` | Solo el diente | Pestaña del navegador |
+
+**Por qué hay una versión horizontal.** El logo del cliente es vertical: el
+diente arriba y el nombre abajo. En el encabezado del sitio caben 44 píxeles de
+alto; con el logo vertical, "Esencia Dental" quedaría de 5 píxeles y no se
+leería. La versión horizontal usa exactamente las mismas piezas del original,
+solo acomodadas de lado.
+
+> **Detalle técnico, por si algún día hay que retocarlo:** en el logo original
+> las letras chicas de "Odontología Familiar" no están caladas — el hueco de
+> cada "o" es una forma blanca encimada, no un agujero. Por eso la versión
+> blanca pinta esos huecos del color del fondo del pie (`#0B1013`) en lugar de
+> dejarlos transparentes. Si cambias el fondo del pie, hay que cambiarlos.
+
+Los iconos (`favicon.svg`, `apple-touch-icon.png`, `img/icon-192.png`,
+`img/icon-512.png`) son el diente sobre el negro de la marca.
 
 ---
 
 ## La imagen que se ve al compartir por WhatsApp
 
 Es `img/og-image.jpg` (1200 × 630 px). Es la que aparece cuando alguien pega el
-enlace del sitio en WhatsApp, Facebook o Messenger. **Hoy todavía es la de la
-clínica que se usó como plantilla: hay que reemplazarla.**
+enlace del sitio en WhatsApp, Facebook o Messenger. Ya está hecha con la marca
+de Esencia Dental: el logo sobre el negro de la marca, con la ciudad y la
+calificación de Google.
 
 Si la cambias, **respeta esas medidas exactas** y avísame para actualizar las
 etiquetas del `<head>`.
@@ -500,14 +546,12 @@ Si necesitas cambiar algo de esa lista, dime qué quieres lograr y lo hago.
 
 | # | Qué falta | Por qué importa |
 |---|---|---|
-| 1 | **El logo de Esencia Dental** (`img/logo.svg`, `img/logo-blanco.svg`, `favicon.svg`, iconos) | Hoy se ve el logo de la clínica que se usó como plantilla. Es lo más urgente |
-| 2 | **Foto de portada** e **imagen para compartir** (`img/og-image.jpg`) | Mismo caso: siguen siendo de la otra clínica |
-| 3 | **Pasar los colores al turquesa de la marca** | Hoy la página es azul; la marca es turquesa |
-| 4 | **Resolver cuál es el teléfono bueno**: 222 327 3990 (Google) o 222 126 1476 (el que pasó el cliente) | Todo el sitio y toda la ficha apuntan a un número. Si es el equivocado, no llega nadie |
-| 5 | Confirmar que ese número **tiene WhatsApp activo** | Es el botón principal de toda la página |
-| 6 | Lista real de tratamientos | Hoy solo dice "odontología familiar e infantil" |
-| 7 | Precios, para activar esa sección | Está lista, solo oculta |
-| 8 | ¿Hay más dentistas además del Dr. Garibay? | Varias reseñas hablan de "los doctores" en plural |
-| 9 | Correo de contacto e Instagram | Hoy la sección de contacto solo tiene teléfono y Facebook |
-| 10 | Confirmar que el Facebook `@esenciadentalfam` es el oficial | Está publicado en el sitio y en el marcado de Google |
-| 11 | Aviso de privacidad | Si más adelante se agrega un formulario, es obligatorio |
+| 1 | **Resolver cuál es el teléfono bueno**: 222 327 3990 (Google) o 222 126 1476 (el que pasó el cliente) | Todo el sitio y toda la ficha apuntan a un número. Si es el equivocado, no llega nadie |
+| 2 | Confirmar que ese número **tiene WhatsApp activo** | Es el botón principal de toda la página |
+| 3 | **Foto de la portada** (fachada, recepción o consultorio) | La de hoy es de banco. Una foto del lugar real convierte mejor y es gratis |
+| 4 | Lista real de tratamientos | Hoy solo dice "odontología familiar e infantil" |
+| 5 | Precios, para activar esa sección | Está lista, solo oculta |
+| 6 | ¿Hay más dentistas además del Dr. Garibay? | Varias reseñas hablan de "los doctores" en plural |
+| 7 | Correo de contacto e Instagram | Hoy la sección de contacto solo tiene teléfono y Facebook |
+| 8 | Confirmar que el Facebook `@esenciadentalfam` es el oficial | Está publicado en el sitio y en el marcado de Google |
+| 9 | Aviso de privacidad | Si más adelante se agrega un formulario, es obligatorio |
